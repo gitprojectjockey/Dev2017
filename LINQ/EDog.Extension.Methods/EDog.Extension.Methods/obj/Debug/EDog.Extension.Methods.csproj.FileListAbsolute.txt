@@ -1,0 +1,10 @@
+C:\@EDevelopment\ESourceCode\EDog.Extension.Methods\EDog.Extension.Methods\bin\Debug\EDog.Extension.Methods.dll
+C:\@EDevelopment\ESourceCode\EDog.Extension.Methods\EDog.Extension.Methods\bin\Debug\EDog.Extension.Methods.pdb
+C:\@EDevelopment\ESourceCode\EDog.Extension.Methods\EDog.Extension.Methods\obj\Debug\EDog.Extension.Methods.dll
+C:\@EDevelopment\ESourceCode\EDog.Extension.Methods\EDog.Extension.Methods\obj\Debug\EDog.Extension.Methods.pdb
+C:\@EDevelopment\ESourceCode\EDog.Extension.Methods\EDog.Extension.Methods\obj\Debug\EDog.Extension.Methods.csprojResolveAssemblyReference.cache
+C:\@EDevelopment\ESourceCode\LINQ\EDog.Extension.Methods\EDog.Extension.Methods\bin\Debug\EDog.Extension.Methods.dll
+C:\@EDevelopment\ESourceCode\LINQ\EDog.Extension.Methods\EDog.Extension.Methods\bin\Debug\EDog.Extension.Methods.pdb
+C:\@EDevelopment\ESourceCode\LINQ\EDog.Extension.Methods\EDog.Extension.Methods\obj\Debug\EDog.Extension.Methods.dll
+C:\@EDevelopment\ESourceCode\LINQ\EDog.Extension.Methods\EDog.Extension.Methods\obj\Debug\EDog.Extension.Methods.pdb
+C:\@EDevelopment\ESourceCode\LINQ\EDog.Extension.Methods\EDog.Extension.Methods\obj\Debug\EDog.Extension.Methods.csprojResolveAssemblyReference.cache

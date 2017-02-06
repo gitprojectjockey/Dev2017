@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MvcAjaxDemo.Data.Core.Domain.Product>
+
+@{
+    ViewBag.Title = "MVC Ajax Demo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Products</h2>
+
+@Ajax.ActionLink("All Products", "GetAllProducts", "Home", new AjaxOptions
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divProducts",
+    InsertionMode = InsertionMode.Replace
+}, 
+new { @class = "btn btn-primary" })
+
+
+
+@Ajax.ActionLink("Most Expensive ", "GetMostExpensiveProducts", "Home", new { count = 10 }, new AjaxOptions
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divProducts",
+    InsertionMode = InsertionMode.Replace
+},  
+new { @class = "btn btn-primary" })
+
+
+
+@Ajax.ActionLink("Least Expensive", "GetLeastExpensiveProducts", "Home", new { count = 10 }, new AjaxOptions
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divProducts",
+    InsertionMode = InsertionMode.Replace
+},
+new { @class = "btn btn-primary" })
+
+<br />
+<br />
+
+<div id="divProducts" class="">
+
+</div>

@@ -1,0 +1,116 @@
+<!– jQuery: Print Page –>
+$(‘a.printPage’).click(function(){
+           window.print();
+           return false;
+});
+<!– HTML: Print Page –>
+<div>
+<a  class=”printPage” href=”#”>Print</a>
+</div>
+
+2. Helping Input Field/Swap Input Field
+
+In order to make an Input Text field helpful, we normally display some default text inside it (For Example “Company Name”) and when user click on it, text disappears and user can enter the value for it.
+You can try it yourself by using the following code snippet.
+
+<!– jQuery: Helping Input Field –>
+$(‘input[type=text]’).focus(function(){
+           var $this = $(this);
+           var title = $this.attr(‘title’);
+          if($this.val() == title)
+           {
+               $this.val(”);
+           }
+}).blur(function() {
+           var $this = $(this);
+           var title = $this.attr(‘title’);
+           if($this.val() == ”)
+           {
+               $this.val(title);
+           }
+});
+<!– HTML: Swap Input Field –>
+<div>
+       <input type=”text”  name=”searchCompanyName”
+                                              value=”Company Name”
+                                              title=”Company Name” />
+</div>
+
+3. Select/Deselect All options
+
+Selecting or Deselecting all available checkbox options using a link on HTML page is common task.
+
+<!– jQuery: Select/Deselect All –>
+$(‘.SelectAll’).live(‘click’, function(){
+         $(this).closest(‘.divAll’).find(‘input[type=checkbox]’).attr(‘checked’, true);
+         return false;
+});
+$(‘.DeselectAll’).live(‘click’, function(){
+         $(this).closest(‘.divAll’).find(‘input[type=checkbox]’).attr(‘checked’, false);
+         return false;
+});<!– HTML: Select/Deselect All –> <div class=”divAll”>
+      <a href=”#” class=”SelectAll”>Select All</a>&nbsp;
+      <a href=”#” class=”DeselectAll”>Deselect All</a>
+      <br />       <input type=”checkbox” id=”Lahore” />
+       <label for=”Lahore”>Lahore</label>
+       <input type=”checkbox” id=”Karachi” />
+       <label for=”Karachi”>Karachi</label>
+       <input type=”checkbox” id=”Islamabad” />
+       <label for=”Islamabad”>Islamabad</label>
+</div>
+4. Disabling Right Click
+
+For web developers, its common to disable right click on certain pages so following code will do the job.
+
+<!– jQuery: Disabling Right Click –>
+$(document).bind(“contextmenu”,function(e){
+       e.preventDefault();
+});
+5. Identify which key is pressed.
+
+Sometimes, we need to validate the input value on a textbox. For example, for “First Name” we might need to avoid numeric values. So, we need to identify which key is pressed and then perform the action accordingly.
+
+<!– jQuery: Which key is Pressed. –>
+$(‘#txtFirstName’).keypress(function(event){
+     alert(event.keyCode);
+});
+
+<!– HTML: Which key is Pressed. –>
+<asp:TextBox ID=”txtFirstName” runat=”server”></asp:TextBox>
+6. Validating an email.
+
+Validating an email address is very common task on HTML form.
+
+<!– jQuery: Validating an email. –>
+$(‘#txtEmail’).blur(function(e) {
+            var sEmail = $(‘#txtEmail’).val();
+            if ($.trim(sEmail).length == 0) {
+                alert(‘Please enter valid email address’);
+                e.preventDefault();
+            }
+            var filter = /^([w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([w-]+.)+))([a-zA-Z]
+                             {2,4}|[0-9]{1,3})(]?)$/;
+            if (filter.test(sEmail)) {
+                alert(‘Valid Email’);
+            }
+            else {
+                alert(‘Invalid Email’);
+                e.preventDefault();
+            }
+        });
+<!– HTML: Validating an email–>
+<asp:TextBox id=”txtEmail” runat=”server” />
+7. Limiting MaxLength for TextArea
+
+Lastly, it usual to put a textarea on a form and validate maximum number of characters on it.
+
+<!– jQuery: Limiting MaLength for TextArea –>
+var MaxLength = 500;
+$(‘#txtDescription’).keypress(function(e)
+{
+if ($(this).val().length >= MaxLength) {
+e.preventDefault();}
+});<!– HTML: Limiting MaLength for TextArea–>
+<asp:TextBox ID=”txtDescription” runat=”server”
+TextMode=”MultiLine” Columns=”50″ Rows=”5″></asp:TextBox>
+This is my selection of jQuery code snippets but jQuery is a very powerful client-side framework and a lot more can be done using it.

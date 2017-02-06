@@ -1,0 +1,12 @@
+C:\@EDevelopment\ESourceCode\LINQ\MyLambdaExamples\TotalLambda\TotalLambda\bin\Debug\TotalLambda.exe.config
+C:\@EDevelopment\ESourceCode\LINQ\MyLambdaExamples\TotalLambda\TotalLambda\bin\Debug\TotalLambda.exe
+C:\@EDevelopment\ESourceCode\LINQ\MyLambdaExamples\TotalLambda\TotalLambda\bin\Debug\TotalLambda.pdb
+C:\@EDevelopment\ESourceCode\LINQ\MyLambdaExamples\TotalLambda\TotalLambda\obj\Debug\TotalLambda.exe
+C:\@EDevelopment\ESourceCode\LINQ\MyLambdaExamples\TotalLambda\TotalLambda\obj\Debug\TotalLambda.pdb
+C:\@EDevelopment\ESourceCode\LINQ\MyLambdaExamples\TotalLambda\TotalLambda\obj\Debug\TotalLambda.csprojResolveAssemblyReference.cache
+C:\@EDevelopment\ESourceCode\@New_Study_2017\LINQ\MyLambdaExamples\TotalLambda\TotalLambda\bin\Debug\TotalLambda.exe.config
+C:\@EDevelopment\ESourceCode\@New_Study_2017\LINQ\MyLambdaExamples\TotalLambda\TotalLambda\obj\Debug\TotalLambda.exe
+C:\@EDevelopment\ESourceCode\@New_Study_2017\LINQ\MyLambdaExamples\TotalLambda\TotalLambda\obj\Debug\TotalLambda.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\LINQ\MyLambdaExamples\TotalLambda\TotalLambda\bin\Debug\TotalLambda.exe
+C:\@EDevelopment\ESourceCode\@New_Study_2017\LINQ\MyLambdaExamples\TotalLambda\TotalLambda\bin\Debug\TotalLambda.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\LINQ\MyLambdaExamples\TotalLambda\TotalLambda\obj\Debug\TotalLambda.csprojResolveAssemblyReference.cache

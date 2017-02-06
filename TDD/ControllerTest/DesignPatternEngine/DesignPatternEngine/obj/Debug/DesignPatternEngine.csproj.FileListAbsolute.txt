@@ -1,0 +1,7 @@
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DesignPatterns\DesignPatternEngine\DesignPatternEngine\bin\Debug\DesignPatternEngine.dll
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DesignPatterns\DesignPatternEngine\DesignPatternEngine\bin\Debug\DesignPatternEngine.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DesignPatterns\DesignPatternEngine\DesignPatternEngine\bin\Debug\log4net.dll
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DesignPatterns\DesignPatternEngine\DesignPatternEngine\bin\Debug\log4net.xml
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DesignPatterns\DesignPatternEngine\DesignPatternEngine\obj\Debug\DesignPatternEngine.dll
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DesignPatterns\DesignPatternEngine\DesignPatternEngine\obj\Debug\DesignPatternEngine.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DesignPatterns\DesignPatternEngine\DesignPatternEngine\obj\Debug\DesignPatternEngine.csprojResolveAssemblyReference.cache

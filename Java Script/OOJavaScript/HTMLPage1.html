@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Client-Demo-From ENDevelopment</title>
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/w3-favicon.png" />
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/main.js"></script> <!--- For Navigation -->
+</head>
+<body>
+    <a name="home"></a>
+    <!--- Start Navigation -->
+
+    <div class="nav-outer">
+        <div class="nav-wrap">
+            <nav class="navigation">
+                <div class="logo"><img src="img/logo.png" alt="" /></div>
+                <div class='nav' nav-menu-style="yoga">
+                    <ul class="nav-menu">
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#services">Services</a>
+                        </li>
+                        <li>
+                            <a href="#contect">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="nav-clear"></div>
+    <!--- End Navigation -->
+    <div class="clearfix"></div>
+    <!--- Start Slider -->
+    <!--IMAGE SLIDES HERE-->
+    <script src="js/jquery.bxslider.min.js"></script><!--For Image Slider-->
+    <div class="slide-wrap">
+        <section class="slider">
+            <ul class="slider1">
+                <li>
+                    <img src="https://www.w3newbie.com/wp-content/uploads/slider-image-3.png" alt="">
+                </li>
+                <li>
+                    <img src="https://www.w3newbie.com/wp-content/uploads/slider-image-1.png" alt="">
+                </li>
+                <li>
+                    <img src="https://www.w3newbie.com/wp-content/uploads/slider-image-2.png" alt="">
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <script type="text/javascript">
+        $('.slider1').bxSlider({
+            mode: 'fade',
+            captions: false,
+            auto: true,
+            pager: false,
+
+        });
+        $('.slider2').bxSlider({
+            pager: false,
+            captions: true,
+            maxSlides: 3,
+            minSlides: 1,
+            slideWidth: 230,
+            slideMargin: 10
+        });
+        $('.slider3').bxSlider({
+            mode: 'fade',
+            captions: false,
+            auto: true,
+            pager: false,
+            controls: false,
+        });
+    </script>
+    <!--- End Slider -->
+    <!--- Start Banner Wrapper -->
+    <a name="about"></a>
+    <div id="banner-wrapper">
+        <h1>Welcome to Demo Web Site</h1>
+        <div class="one-half">
+            <h3>Heading Title Section</h3>
+            <p>
+                Quisque elementum eros eget leo pharetra dapibus. Nullam consectetur velit tortor, in tempor nulla ultricies eget. Nunc pellentesque pretium purus sit amet posuere. Ut scelerisque, arcu ut tempor pulvinar, dui metus porta quam, non ornare lorem arcu ut enim. Ut ut magna eu neque tristique volutpat vel at orci. Morbi condimentum vestibulum massa id pretium. Donec luctus turpis egestas iaculis tincidunt. Praesent id justo aliquet, pulvinar risus eget, pharetra mi. Maecenas at pretium nibh. Quisque laoreet, purus eget sodales viverra, nulla nibh mollis est, vitae finibus magna risus at sapien. Aenean vitae imperdiet ligula. Donec tempor leo aliquam dapibus tincidunt.
+            </p>
+            <h3>Heading Title Section</h3>
+            <p>
+                Quisque elementum eros eget leo pharetra dapibus. Nullam consectetur velit tortor, in tempor nulla ultricies eget. Nunc pellentesque pretium purus sit amet posuere. Ut scelerisque, arcu ut tempor pulvinar, dui metus porta quam, non ornare lorem arcu ut enim. Ut ut magna eu neque tristique volutpat vel at orci. Morbi condimentum vestibulum massa id pretium. Donec luctus turpis egestas iaculis tincidunt. Praesent id justo aliquet, pulvinar risus eget, pharetra mi. Maecenas at pretium nibh. Quisque laoreet, purus eget sodales viverra, nulla nibh mollis est, vitae finibus magna risus at sapien. Aenean vitae imperdiet ligula. Donec tempor leo aliquam dapibus tincidunt.
+            </p>
+        </div>
+    </div>
+
+    <!--- Start Parallax Section -->
+    <section class="parallax-1">
+        <div class="parallax-inner">
+            <section class="one-third">
+                <h3>Parallax 1 Heading Title</h3>
+                <p>
+                    Donec urna ante dolor quam rhoncus pellentesque fringilla aliquam vulputate, semper mauris varius diam sodales ante sagittis tortor, quam et rhoncus netus nec quisque elementum libero nibh consectetur pharetra inceptos vulputate a pharetra suscipit.
+                </p>
+            </section>
+            <section class="one-third">
+                <h3>Parallax 1 Heading Title</h3>
+                <p>
+                    Donec urna ante dolor quam rhoncus pellentesque fringilla aliquam vulputate, semper mauris varius diam sodales ante sagittis tortor, quam et rhoncus netus nec quisque elementum libero nibh consectetur pharetra inceptos vulputate a pharetra suscipit.
+                </p>
+            </section>
+            <section class="one-third">
+                <h3>Parallax 1 Heading Title</h3>
+                <p>
+                    Donec urna ante dolor quam rhoncus pellentesque fringilla aliquam vulputate, semper mauris varius diam sodales ante sagittis tortor, quam et rhoncus netus nec quisque elementum libero nibh consectetur pharetra inceptos vulputate a pharetra suscipit.
+                </p>
+            </section>
+        </div>
+    </section>
+    <!--- End Parallax Section -->
+    <!--- Start Banner Wrapper -->
+    <section class="left-col">
+        <h1>Heading Title</h1>
+        <p>
+            Morbi condimentum vestibulum massa id pretium. Donec luctus turpis egestas iaculis tincidunt. Praesent id justo aliquet, pulvinar risus eget, pharetra mi. Maecenas at pretium nibh. Quisque laoreet, purus eget sodales viverra, nulla nibh mollis est, vitae finibus magna risus at sapien. Aenean vitae imperdiet ligula. Donec tempor leo aliquam dapibus tincidunt.
+        </p>
+        <p>
+            Morbi condimentum vestibulum massa id pretium. Donec luctus turpis egestas iaculis tincidunt. Praesent id justo aliquet, pulvinar risus eget, pharetra mi. Maecenas at pretium nibh. Quisque laoreet, purus eget sodales viverra, nulla nibh mollis est, vitae finibus magna risus at sapien. Aenean vitae imperdiet ligula. Donec tempor leo aliquam dapibus tincidunt.
+        </p>
+        <p>
+            Morbi condimentum vestibulum massa id pretium. Donec luctus turpis egestas iaculis tincidunt. Praesent id justo aliquet, pulvinar risus eget, pharetra mi. Maecenas at pretium nibh. Quisque laoreet, purus eget sodales viverra, nulla nibh mollis est, vitae finibus magna risus at sapien. Aenean vitae imperdiet ligula. Donec tempor leo aliquam dapibus tincidunt.
+        </p>
+    </section>
+    <section class="sidebar">
+        <img src="https://www.w3newbie.com/wp-content/uploads/beach-building.jpg" alt="">
+    </section>
+    <!--- End Banner Wrapper -->
+    <!--- Start Second Parallax Section -->
+    <section class="parallax-2">
+        <div class="parallax-inner">
+            <section class="one-third">
+                <h3>Parallax 2 Heading Title</h3>
+                <p>
+                    Donec urna ante dolor quam rhoncus pellentesque fringilla aliquam vulputate, semper mauris varius diam sodales ante sagittis tortor, quam et rhoncus netus nec quisque elementum libero nibh consectetur pharetra inceptos vulputate a pharetra suscipit.
+                </p>
+            </section>
+            <section class="one-third">
+                <h3>Parallax 2 Heading Title</h3>
+                <p>
+                    Donec urna ante dolor quam rhoncus pellentesque fringilla aliquam vulputate, semper mauris varius diam sodales ante sagittis tortor, quam et rhoncus netus nec quisque elementum libero nibh consectetur pharetra inceptos vulputate a pharetra suscipit.
+                </p>
+            </section>
+            <section class="one-third">
+                <h3>Parallax 2 Heading Title</h3>
+                <p>
+                    Donec urna ante dolor quam rhoncus pellentesque fringilla aliquam vulputate, semper mauris varius diam sodales ante sagittis tortor, quam et rhoncus netus nec quisque elementum libero nibh consectetur pharetra inceptos vulputate a pharetra suscipit.
+                </p>
+            </section>
+        </div>
+    </section>
+    <!--- End Second Parallax Section -->
+    <!--- Start Banner Wrapper -->
+    <div id="banner-wrapper">
+        <h1>Full Width Heading Title Section</h1>
+        <section class="one-third">
+            <img src="https://www.w3newbie.com/wp-content/uploads/beach-camera.png" alt="">
+            <h3>Heading Text</h3>
+            <p>
+                semper mauris varius diam sodales ante sagittis tortor, quam et rhoncus netus nec quisque elementum libero nibh consectetur pharetra inceptos vulputate a pharetra suscipit.
+            </p>
+        </section>
+        <h1>Full Width Heading Title Section</h1>
+        <section class="one-third">
+            <img src="https://www.w3newbie.com/wp-content/uploads/girl-camera.png" alt="">
+            <h3>Heading Text</h3>
+            <p>
+                semper mauris varius diam sodales ante sagittis tortor, quam et rhoncus netus nec quisque elementum libero nibh consectetur pharetra inceptos vulputate a pharetra suscipit.
+            </p>
+        </section>
+        <h1>Full Width Heading Title Section</h1>
+        <section class="one-third">
+            <img src="https://www.w3newbie.com/wp-content/uploads/girl-beach.png" alt="">
+            <h3>Heading Text</h3>
+            <p>
+                semper mauris varius diam sodales ante sagittis tortor, quam et rhoncus netus nec quisque elementum libero nibh consectetur pharetra inceptos vulputate a pharetra suscipit.
+            </p>
+        </section>
+    </div>
+
+    <!--- End Banner Wrapper -->
+    <!--- Start Footer -->
+    <footer>
+        <p>&copy Demo Parallax Demo</p>
+    </footer>
+    <!--- End Footer -->
+
+</body>
+</html>

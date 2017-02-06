@@ -1,0 +1,6 @@
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Inheritance\Inheritance\bin\Debug\Inheritance.exe.config
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Inheritance\Inheritance\bin\Debug\Inheritance.exe
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Inheritance\Inheritance\bin\Debug\Inheritance.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Inheritance\Inheritance\obj\Debug\Inheritance.csprojResolveAssemblyReference.cache
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Inheritance\Inheritance\obj\Debug\Inheritance.exe
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Inheritance\Inheritance\obj\Debug\Inheritance.pdb

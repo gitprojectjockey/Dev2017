@@ -1,0 +1,4 @@
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Testing\TestingMvcControllers\FizzBuzz.Library\bin\Debug\FizzBuzz.Library.dll
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Testing\TestingMvcControllers\FizzBuzz.Library\bin\Debug\FizzBuzz.Library.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Testing\TestingMvcControllers\FizzBuzz.Library\obj\Debug\FizzBuzz.Library.dll
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Testing\TestingMvcControllers\FizzBuzz.Library\obj\Debug\FizzBuzz.Library.pdb

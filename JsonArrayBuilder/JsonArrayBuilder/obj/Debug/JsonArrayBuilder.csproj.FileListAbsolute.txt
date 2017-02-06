@@ -1,0 +1,16 @@
+C:\@EDevelopment\ESourceCode\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\bin\Debug\JsonArrayBuilder.exe.config
+C:\@EDevelopment\ESourceCode\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\bin\Debug\JsonArrayBuilder.exe
+C:\@EDevelopment\ESourceCode\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\bin\Debug\JsonArrayBuilder.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\bin\Debug\Newtonsoft.Json.dll
+C:\@EDevelopment\ESourceCode\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\bin\Debug\Newtonsoft.Json.xml
+C:\@EDevelopment\ESourceCode\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\obj\Debug\JsonArrayBuilder.exe
+C:\@EDevelopment\ESourceCode\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\obj\Debug\JsonArrayBuilder.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\obj\Debug\JsonArrayBuilder.csprojResolveAssemblyReference.cache
+F:\@MyStuff\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\bin\Debug\JsonArrayBuilder.exe.config
+F:\@MyStuff\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\obj\Debug\JsonArrayBuilder.exe
+F:\@MyStuff\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\obj\Debug\JsonArrayBuilder.pdb
+F:\@MyStuff\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\bin\Debug\JsonArrayBuilder.exe
+F:\@MyStuff\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\bin\Debug\JsonArrayBuilder.pdb
+F:\@MyStuff\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\bin\Debug\Newtonsoft.Json.dll
+F:\@MyStuff\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\bin\Debug\Newtonsoft.Json.xml
+F:\@MyStuff\@New_Study_2017\JsonArrayBuilder\JsonArrayBuilder\obj\Debug\JsonArrayBuilder.csprojResolveAssemblyReference.cache

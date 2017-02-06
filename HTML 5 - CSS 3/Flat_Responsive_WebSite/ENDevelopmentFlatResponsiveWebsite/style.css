@@ -1,0 +1,432 @@
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans';
+
+/*-- My latest CSS3 Mobile to Desktop responsive styles */
+/*-- This is called a reset style and it is applied to the entire document--*/
+/*-- It is attached to the <!DOCTYPE html> starting tag --*/
+* {
+	margin:0;
+	padding: 0;
+	border:0;
+}
+
+body{
+	background-color: #f5f5f5;
+	color: #67727a;
+	font-family: 'Alegreya Sans', san-serif;
+	margin: 0;
+}
+
+/*-- Start Html5 header --*/
+/*========================*/
+header{
+   background-color: #6991ac;
+   width: 100%;
+   height: 86px;	
+}
+
+/*-- This is tageting the header inner div with Id header-inner --*/
+#header-inner{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/*-- Target the anchor tag logo --*/
+#logo{
+ 	margin: 20px;
+ 	float: left;
+ 	width: 200px;
+ 	height: 60px;
+ 	background: url(img/EN.png) no-repeat center;
+}
+/*-- End Html5 header --*/
+/*======================*/
+
+
+
+/*-- starting Html5 navagation --*/
+/*===============================*/
+nav{
+	float: right;
+	/*--top right bottom left --*/
+	padding: 25px 20px 0px 0px
+
+}
+
+#menu-icon{
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: url(img/nav.png) center;
+}
+a:hover#menu-icon{
+	border-radius: 4px 4px 0px 0px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+/*-- target of li tag inside the ul tag which is inside the nav tag --*/
+nav ul li{
+	font-family: 'Alegreya Sans', san-serif;
+	font-size: 150%;
+	display: inline-block;
+	float: left;
+	padding: 10px;
+}
+/*-- target of ancore tag inside the li tag which is inside the ul tag which is inside the nav tag --*/
+nav ul li a{
+ color: #f5f5f5;
+ text-decoration: none;
+}
+
+nav ul li a:hover{
+	color: #c3d7df;
+
+}
+
+/*-- target and color the current class --*/
+.current{
+	color: #c3d7df;
+}
+
+/*-- End Html5 navagation style --*/
+/*===============================*/
+
+
+/*-- Start banner - color behind ENDevMain.png --*/
+/*==============================================*/
+.banner{
+	width:100%;
+	background-color: #6991ac;
+}
+
+.banner-inner{
+	max-width:1100px;
+	/*-- center banner-inner on page --*/
+	margin: 0 auto;
+}
+
+/*-- End banner style --*/
+/*==============================================*/
+
+
+/*-- Start one-fourth class style  --*/
+/*==================================*/
+.one-fourth{
+  width: 25%;
+  float: left;
+  text-align: center;
+  color: white;
+}
+
+#html{
+	background-color: #f1aa90;
+}
+
+#css{
+	background-color: #beb9ad;
+}
+
+#seo{
+	background-color: #aadcd2;
+}
+
+#social{
+	background-color: #a2b2c1;
+}
+
+.one-fourth i{
+	color:#f0f0f0;
+	font-size: 500%;
+	padding: 5% 0 4% 0;
+}
+/*-- End one-fourth class style  --*/
+/*================================*/
+
+
+/*-- Start tablet, mobile and desktop inner-wappers --*/
+/*===================================================*/
+
+/*--start tablet inner-wapper tablet--*/
+/*===================================*/
+.inner-wrapper-tablet{
+	float: left;
+	width: 100%;
+	background-color: #c3d7df
+}
+
+article{
+	float: left;
+	width:50%;
+	height: auto;
+}
+
+#tablet{
+	background-color: #c3d7df;
+}
+
+aside{
+	float: right;
+	margin: 0 auto;
+	width:50%;
+	height: auto;
+}
+
+#tabletaside{
+	background-color: #a2b1c1;
+}
+
+/*-- start inner-wapper mobile-- */
+/*==============================*/
+.inner-wrapper-mobile{
+  	float: left;
+  	width: 100%;
+  	background-color: #c3d7df;
+}
+
+#mobile{
+	background-color: #beb9ad;
+}
+/*-- start inner-wapper desktop--*/
+/*==============================*/
+
+
+.inner-wrapper-desktop{
+	float: left;
+ 	width: 100%;
+  	background-color: #c3d7df;
+}
+
+#desktopaside{
+	background-color: #f1aa90;
+}
+
+/*-- End tablet, mobile and desktop inner-wappers --*/
+/*===================================================*/
+
+
+/*-- Start one third inner wrapper sections --*/
+/*=============================*/
+
+.one-third{
+	width: 33.33333%;
+	float: left;
+	text-align: center;
+}
+
+#google{
+	background-color: #a2b1c1;
+}
+
+#marketing{
+	background-color: #beb9ad;
+}
+
+#customers{
+	background-color: #aadcd2;
+}
+
+/*-- End one third sections --*/
+/*=============================*/
+
+/*-- Start smiley face --*/
+/*======================*/
+
+	#smiley{
+		background-color:  #aadcd2;
+		padding: 0 0 1% ;
+		clear: both;
+	}
+
+/*-- End smiley face --*/
+/*====================*/
+
+/*-- Start footer --*/
+/*=================*/
+
+footer{
+	background-color: #6991ac;
+	width: 100%;
+}
+.social{
+	list-style-type: none;
+	text-align: center;
+}
+
+.social li{
+	display: inline;
+}
+
+.social i{
+	font-size: 460%;
+	margin: 1%;
+	padding: 5% 5% 5% 4%;
+	color: #c3d7df;
+}
+
+.social i:hover{
+	color: #f5f5f5;
+}
+
+/*-- End footer --*/
+/*=================*/
+
+/*-- Start footer second aka socket --*/
+/*===================================*/
+
+footer.second{
+	border-top:1px solid #aadcd2;
+	background-color: #544b59;
+	max-height: 55px;
+	margin 0;
+}
+
+footer.second p{
+	padding: 5px 0px 9px 0px;
+	text-align: center;
+ }
+/*-- End footer second aka socket --*/
+/*==================================*/
+
+
+
+/*-- Start body elements --*/
+/*========================*/
+h2{
+	font-size: 250%;
+	font-weight: 700;
+	text-align: center;
+	padding-top: 2%;
+	color: #f5f5f5;
+}
+
+h3{
+	font-size: 175%;
+	font-weight: 155;
+	/*-- padding 5% top-bottom, 0 left-right --*/
+	padding: 5%,0;
+	font-weight: 400;
+	line-height: 155%
+	color: #f5f5f5;
+}
+
+p{
+	font-family: 'Alegreya Sans', san-serif;
+	color: #f5f5f5;
+	font-size: 160%
+	line-height:150%;
+	padding: 3%;
+	text-indent: 2%;
+	text-align: justify;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+	width:auto;
+	margin-bottom: -4px;
+}
+
+/*-- End body elements --*/
+/*=========================*/
+
+
+/*-- Start responsive media queries --*/
+/*=========================*/
+
+@media screen and (max-width: 768px){
+   	h2{
+   		font-size: 150%;
+   	}
+
+   	h3{
+		font-size: 125%;
+   	}
+
+   	p{
+   		font-size: 120%;
+   	}
+
+	header{
+		position:absolute;
+	}
+
+	#logo{
+	   margin: 20px 0px 20px -25px;
+	   background: url(img/EN_mobil.png) no-repeat center;
+	 }
+
+	 #menu-icon{
+	 	display: inline-block;
+	 	margin: 10px 0px 20px -25px;
+	 }
+
+	 nav ul, nav:active{
+	 	display: none;
+	 	z-index: 1000;
+	 	position: absolute;
+	 	padding: 20px;
+	 	background: #6991ac;
+	 	right: 20px;
+	 	top: 55px;
+	 	border: 1px solid #fff;
+	 	border-radius: 10px 10px 10px 10px;
+	 	width:30%;
+	 }
+
+	 nav:hover ul{
+	 	display: block;
+	 }
+
+	 nav li{
+	 	text-align: center;
+	 	width: 90%;
+	 	padding: 10px 0px;
+	 }
+
+	 .banner{
+	 	padding: 80px 0 0 0;
+	 }
+
+	 .one-fourth{
+	 	float: left;
+	 	width:100%;
+	 }
+
+	 .one-fourth i{
+	 	font-size: 350%
+	 	padding: 4% 0 1% 0;
+	 }
+
+	 article{
+	 	width: 100%;
+	 }
+
+	 aside{
+	 	width: 100%;
+	 }
+
+	 .hand-mobile{
+	 	display: none;
+	 }
+
+	 .one-third{
+	 	width: 100%;
+	 }
+
+	 .social i{
+	 	font-size: 180%;
+	 }
+
+
+
+
+
+
+
+
+
+
+
+}

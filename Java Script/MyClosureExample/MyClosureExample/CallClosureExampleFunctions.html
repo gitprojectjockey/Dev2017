@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+        //I am using nested anonymous function or a CLOSURE to maintain scope of variable counter. My innner function has access to the outer functions varible counter.
+        //Because I have wrapped the entire outer function in () and added () which is called and IIFE (Immediatly Invoked Function Expression ) the function is placed on the DOM as soon as the document is loaded.
+        //Now I have assigned a variable incrementClickCount to hold a reference to the function expression and I can excute the function via the varible in the click event of the button.
+        //Very cool!
+        var incrementClickCount = (function ()
+        {
+            var counter = 0;
+            return function ()
+            {
+                counter += 1;
+                document.getElementById("result").innerText = counter;
+                return counter;
+            }
+        })();
+
+       
+     
+        function Customer() {
+            this.FirstName = "";
+            this.LastName = "";
+            this.MiddleName = "";
+            this.Age = 0;
+            this.getDetails = function () {
+                return this.FirstName + " " + this.LastName + " " + this.MiddleName + " " + this.Age;
+            }
+        };
+       
+        var myCustomer = new Customer();
+
+        function inputCustomerInfo(firstName, lastName, middleName, age) {
+
+            debugger;
+            myCustomer.FirstName = firstName;
+            myCustomer.LastName = lastName;
+            myCustomer.MiddleName = middleName;
+            myCustomer.Age = age;
+           // document.getElementById("result").innerText = myCustomer.getDetails();
+        }
+
+        function outputCustomerInfo() {
+            document.getElementById("result").innerText = myCustomer.getDetails();
+        }
+
+    </script>
+</head>
+<body>
+    <input id="btnIncrement" type="button" value="View the function expression held in variable incrementClickCount " onclick='alert(incrementClickCount)' />
+    <input id="btnIncrement" type="button" value="Increment click count by mainaining state in local variable with closures" onclick='incrementClickCount()' />
+    <br />
+    <input id="btnAddCustomerInfo" type="button" value="Load customer information" onclick='inputCustomerInfo("Eric", "Nordin", "Wayne", 54);' />
+    <input id="btnOutputCustomerInfo" type="button" value="Output customer details" onclick='outputCustomerInfo();' />
+
+    <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="Scripts/jquery-3.1.1.js"></script>
+    <meta charset="utf-8" />
+
+   <!--I installed Install-Package Microsoft.AspNet.WebApi.Cors and enabled Cors on the Products Web API Service-->
+   <!--By Installing CORS Cross-Origin Requests on the web service I am able to call the products api using stright json with ajax-->
+    
+   
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var ulProducts = $('#ulProducts');
+            $('#btnGetAllProducts').click(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: 'http://localhost:8081/ENDev/Services/api/products',
+                    datatype: 'json',
+                    success: function (data) {
+                        ulProducts.empty();
+                        $.each(data, function (index, val) {
+                            var row = val.ProductId + ' ' + val.ProductName + ' ' + val.ProductDescription
+                            ulProducts.append('<li>' + row + '</li>');
+                        });
+                    }
+                });
+            });
+
+            $("#btnClear").click(function () {
+                ulProducts.empty();
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <input type="button" id="btnGetAllProducts" value="GetAllProducts" />
+    <input type="button" id="btnClear" value="Clear" />
+    <ul id="ulProducts" />
+</body>
+
+
+
+
+
+
+
+
+</html>

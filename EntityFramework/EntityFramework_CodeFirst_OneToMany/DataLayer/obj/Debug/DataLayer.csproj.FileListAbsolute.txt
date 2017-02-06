@@ -1,0 +1,13 @@
+C:\@EDevelopment\ESourceCode\@New_Study_2017\EntityFramework\EntityFramework_CodeFirst_OneToMany\DataLayer\bin\Debug\DataLayer.dll.config
+C:\@EDevelopment\ESourceCode\@New_Study_2017\EntityFramework\EntityFramework_CodeFirst_OneToMany\DataLayer\bin\Debug\DataLayer.dll
+C:\@EDevelopment\ESourceCode\@New_Study_2017\EntityFramework\EntityFramework_CodeFirst_OneToMany\DataLayer\bin\Debug\DataLayer.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\EntityFramework\EntityFramework_CodeFirst_OneToMany\DataLayer\bin\Debug\EntityFramework.dll
+C:\@EDevelopment\ESourceCode\@New_Study_2017\EntityFramework\EntityFramework_CodeFirst_OneToMany\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\@EDevelopment\ESourceCode\@New_Study_2017\EntityFramework\EntityFramework_CodeFirst_OneToMany\DataLayer\bin\Debug\EntityFramework.xml
+C:\@EDevelopment\ESourceCode\@New_Study_2017\EntityFramework\EntityFramework_CodeFirst_OneToMany\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\@EDevelopment\ESourceCode\@New_Study_2017\EntityFramework\EntityFramework_CodeFirst_OneToMany\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\@EDevelopment\ESourceCode\@New_Study_2017\EntityFramework\EntityFramework_CodeFirst_OneToMany\DataLayer\obj\Debug\DataLayer.dll
+C:\@EDevelopment\ESourceCode\@New_Study_2017\EntityFramework\EntityFramework_CodeFirst_OneToMany\DataLayer\obj\Debug\DataLayer.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\EntityFramework\EntityFramework_CodeFirst_OneToMany\DataLayer\obj\Debug\DataLayer.Migrations.init.resources
+C:\@EDevelopment\ESourceCode\@New_Study_2017\EntityFramework\EntityFramework_CodeFirst_OneToMany\DataLayer\obj\Debug\DataLayer.csproj.GenerateResource.Cache
+C:\@EDevelopment\ESourceCode\@New_Study_2017\EntityFramework\EntityFramework_CodeFirst_OneToMany\DataLayer\obj\Debug\DataLayer.Migrations.Addprecisiontoproductprice.resources

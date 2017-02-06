@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="EDataServeContext-Web.config Connection String" description="EDataServeContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=edevelopment.database.windows.net;Initial Catalog=ProductRepository;Persist Security Info=False;User ID=ewnordin;Password=Wr400fg786" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\@EDevelopment\\ESourceCode\\@New_Study_2017\\MVC_WebApi\\ProductService\\ProductService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='EDataServeContext']/@connectionString" />
+  </parameter>
+</parameters>

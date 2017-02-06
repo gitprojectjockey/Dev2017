@@ -1,0 +1,9 @@
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DelegatesAndEvents\DelegatesAndEvents\bin\Debug\DelegatesAndEvents.exe.config
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DelegatesAndEvents\DelegatesAndEvents\bin\Debug\DelegatesAndEvents.exe
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DelegatesAndEvents\DelegatesAndEvents\bin\Debug\DelegatesAndEvents.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DelegatesAndEvents\DelegatesAndEvents\obj\Debug\DelegatesAndEvents.csprojResolveAssemblyReference.cache
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DelegatesAndEvents\DelegatesAndEvents\obj\Debug\DelegatesAndEvents.Form1.resources
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DelegatesAndEvents\DelegatesAndEvents\obj\Debug\DelegatesAndEvents.Properties.Resources.resources
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DelegatesAndEvents\DelegatesAndEvents\obj\Debug\DelegatesAndEvents.csproj.GenerateResource.Cache
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DelegatesAndEvents\DelegatesAndEvents\obj\Debug\DelegatesAndEvents.exe
+C:\@EDevelopment\ESourceCode\@New_Study_2017\DelegatesAndEvents\DelegatesAndEvents\obj\Debug\DelegatesAndEvents.pdb

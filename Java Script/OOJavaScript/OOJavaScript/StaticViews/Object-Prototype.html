@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+
+        // ---------- PROTOTYPE ----------
+        // Every function has a prototype property that contains an object
+        // You can add properties and methods to the prototype object
+        // and then when you call for them to execute they are used
+        // just as if they belonged to the object
+        
+
+
+        // Get the number of function arguments
+
+        function getSum(num1, num2) {
+            return num1 + num2;
+        };
+
+        document.write("Num of arguments : " + getSum.length + "<br />");
+        //----------------------------------------------------------------------
+        // You can add properties and methods to this object
+        
+        function Mammal(name) {
+            this.name = name;
+            this.getInfo = function () {
+                return "The mammals name is " + name;
+            }
+        };  
+
+        var dog = new Mammal("Dog");
+        document.writeln("The mammal is now " + dog.name + "<br/>");
+
+        //---------------------------------------------------------------------
+
+        // Use prototype to add a property dynamically
+        Mammal.prototype.sound = "Oink";
+        
+        // use it to add a method dynamically
+        Mammal.prototype.makeSound = function () {
+            return this.name + " says " + this.sound + "<br/>";
+        };
+
+        //-----------------------------------------------------------------------
+
+        var pig = new Mammal("Pigglet");
+        
+        document.writeln("The new mammal is " + pig.name + "<br/>");
+
+        document.writeln(pig.makeSound() + "<br/>");
+        document.writeln("<br/>");
+        
+
+        // List all properties of an object
+        for (var prop in pig)    {
+            document.write(prop + " : " + pig[prop] + "<br />");
+        }
+
+        // Check which property belongs to prototype vs. the object pig
+        document.writeln("<br/>");
+        document.write("Does name Property belong to pig: " + pig.hasOwnProperty("name") + "<br />");
+
+        // This is false because propery sound belongs to the prototype object.
+        document.write("Does sound Property belong to pig: " + pig.hasOwnProperty("sound") + "<br />");
+
+        //------------------------------------------------------------------------------------
+
+        // You can add methods to built in JS objects like extension methods
+        // add inArray method to Javascript Array.
+        Array.prototype.inArray = function inArray(value) {
+            for (i = 0; i < this.length; i++) {
+                if (this[i] === value) {
+                    return true;
+                }
+            }
+            return false;
+        };
+
+        var sampleArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        document.writeln("Is three in the array? " + sampleArray.inArray(3));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

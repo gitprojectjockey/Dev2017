@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Controllers/angular-repeat-arrays.js"></script>
+</head>
+<body ng-app="myModule" >
+    <div ng-controller="myController">
+        <table>
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Gender</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--loop through employees-->
+                <tr ng-repeat="employee in employees">
+                    <td> {{ employee.firstName }} </td>
+                    <td> {{ employee.lastName }} </td>
+                    <td> {{ employee.gender }} </td>
+                    <td> {{ employee.salary }} </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <ul>
+            <!--loop through coutries-->
+            <li ng-repeat="country in countries">
+                {{country.name}}
+                <ul>
+                    <!--loop through cities in counties-->
+                    <li ng-repeat="city in country.cities">
+                        {{city.name}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <hr />
+        <ul>
+            <!--loop through coutries with index-->
+            <li ng-repeat="country in countries">
+                {{country.name}} - {{$index}}
+                <ul>
+                    <!--loop through cities in counties-->
+                    <li ng-repeat="city in country.cities">
+                        {{city.name}} - {{$index}} and Parent Index {{$parent.$index}}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

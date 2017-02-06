@@ -1,0 +1,6 @@
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Polymorphism\Polymorphism\bin\Debug\Polymorphism.exe.config
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Polymorphism\Polymorphism\bin\Debug\Polymorphism.exe
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Polymorphism\Polymorphism\bin\Debug\Polymorphism.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Polymorphism\Polymorphism\obj\Debug\Polymorphism.exe
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Polymorphism\Polymorphism\obj\Debug\Polymorphism.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Polymorphism\Polymorphism\obj\Debug\Polymorphism.csprojResolveAssemblyReference.cache

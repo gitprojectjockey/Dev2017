@@ -1,0 +1,6 @@
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\InterfacePolymorphicBavior\InterfacePolymorphicBavior\bin\Debug\InterfacePolymorphicBavior.exe.config
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\InterfacePolymorphicBavior\InterfacePolymorphicBavior\bin\Debug\InterfacePolymorphicBavior.exe
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\InterfacePolymorphicBavior\InterfacePolymorphicBavior\bin\Debug\InterfacePolymorphicBavior.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\InterfacePolymorphicBavior\InterfacePolymorphicBavior\obj\Debug\InterfacePolymorphicBavior.csprojResolveAssemblyReference.cache
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\InterfacePolymorphicBavior\InterfacePolymorphicBavior\obj\Debug\InterfacePolymorphicBavior.exe
+C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\InterfacePolymorphicBavior\InterfacePolymorphicBavior\obj\Debug\InterfacePolymorphicBavior.pdb

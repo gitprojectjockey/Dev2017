@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Objects-Classes</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script type="text/javascript">
+
+
+        // A basic JavaScript object with properties and a method
+        var customer = {
+            name: "Tom Smith",
+            speak: function(){
+                return "My name is " + this.name;
+            },
+            address: {
+                street: "123 South pleasent",
+                city: "Amherst",
+                state: "MA"
+            }
+        };
+
+        document.writeln(customer.speak() + "<br/>");
+
+        // You access properties and object properties like this
+        document.write(customer.name + " lives at " + customer.address.street + " " + customer.address.state + "<br />");
+
+        //------------------------------------------------------------------------------------------------------------------
+        // Creating multiple objects of the same type with Constructor
+        // Functions. Constructors provide the functions that classes
+        // provide in other languages
+        function Person(name, street) {
+
+            // this allows us to refer to an object even though we
+            // don't know its name before it is created
+            this.name = name;
+            this.street = street;
+            this.info = function () {
+                return "My name is " + this.name + " and I live on " + this.street;
+            }
+        };
+        // You call constructor functions with new...
+        var ericSmith = new Person("Eric",  "125 south street");
+        document.write(ericSmith.info() + "<br />");
+
+        //---------------------------------------------------------------------------------------------------------------------
+
+        // instanceof tells you if an object is of a certain type
+        document.write("Bob is a person : " + (ericSmith instanceof Person) + "<br />");
+
+        //----------------------------------------------------------------------------------------------------------------------
+        // You can pass an object to a function and change values
+        function changeName(ericSmith) {
+            ericSmith.name = "Eric Nordin";
+        };
+
+        changeName(ericSmith);
+        document.writeln("Eric Smith became " + ericSmith.name);
+        //----------------------------------------------------------------------------------------------------------------------
+
+
+    </script>
+</body>
+</html>

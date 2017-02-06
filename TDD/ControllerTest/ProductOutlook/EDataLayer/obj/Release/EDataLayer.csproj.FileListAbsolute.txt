@@ -1,0 +1,11 @@
+C:\@EDevelopment\ESourceCode\@New_Study_2017\MVC_WebApi\ProductService\EDataLayer\bin\Release\EDataLayer.dll
+C:\@EDevelopment\ESourceCode\@New_Study_2017\MVC_WebApi\ProductService\EDataLayer\bin\Release\EDataLayer.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\MVC_WebApi\ProductService\EDataLayer\bin\Release\EntityFramework.dll
+C:\@EDevelopment\ESourceCode\@New_Study_2017\MVC_WebApi\ProductService\EDataLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\@EDevelopment\ESourceCode\@New_Study_2017\MVC_WebApi\ProductService\EDataLayer\bin\Release\EntityFramework.xml
+C:\@EDevelopment\ESourceCode\@New_Study_2017\MVC_WebApi\ProductService\EDataLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\@EDevelopment\ESourceCode\@New_Study_2017\MVC_WebApi\ProductService\EDataLayer\obj\Release\EDataLayer.csproj.GenerateResource.Cache
+C:\@EDevelopment\ESourceCode\@New_Study_2017\MVC_WebApi\ProductService\EDataLayer\obj\Release\EDataLayer.dll
+C:\@EDevelopment\ESourceCode\@New_Study_2017\MVC_WebApi\ProductService\EDataLayer\obj\Release\EDataLayer.pdb
+C:\@EDevelopment\ESourceCode\@New_Study_2017\MVC_WebApi\ProductService\EDataLayer\obj\Release\EDataLayer.csprojResolveAssemblyReference.cache
+C:\@EDevelopment\ESourceCode\@New_Study_2017\MVC_WebApi\ProductService\EDataLayer\obj\Release\EDataLayer.Migrations.init.resources
