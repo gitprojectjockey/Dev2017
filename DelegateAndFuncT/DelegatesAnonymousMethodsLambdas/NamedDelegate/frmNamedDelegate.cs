@@ -9,15 +9,15 @@ namespace DelegatesAnonymousMethodsLambdas.NamedDelegate
     public partial class frmNamedDelegate : Form
     {
         // Create a parameter of type PersonFormat Delagate.
-        NamedDelegate.Person.PersonFormat _formatPerson;
+        Person.PersonFormat _formatPerson;
 
-        List<NamedDelegate.Person> _people;
+        List<Person> _people;
 
         public frmNamedDelegate()
         {
             InitializeComponent();
             radDefault.Checked = true;
-            _people = NamedDelegate.People.GetPeople();
+            _people = People.GetPeople();
             listResult.DataSource = _people;
         }
 

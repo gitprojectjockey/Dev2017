@@ -1,0 +1,24 @@
+﻿@model OnlineShoppingStore.Domain.Entities.Cart
+
+<div class="navbar-right navbar-brand" style="padding-right:20px" >
+    <span class="hidden-xs">Your Cart:</span>
+    <span class="visible-xs nav-font-size-mobile">Your Cart:</span>
+
+    <span class="hidden-xs">@Model.CartItems.Sum(ci => ci.Quantity) Item(s)</span>
+    <span class="visible-xs nav-font-size-mobile">@Model.CartItems.Sum(ci => ci.Quantity) Item(s)</span>
+
+    <span class="hidden-xs">@Model.ComputeTotalPrice().ToString("c")</span>
+    <span class="visible-xs nav-font-size-mobile">@Model.ComputeTotalPrice().ToString("c") 
+    
+    @Html.ActionLink("Checkout", "Index", "Cart", new { returnUrl = Request.Url.PathAndQuery }, new { @style = "color:lightblue;" })
+    </span>
+    @if (ViewBag.DisableMenuCheckOut == true)
+    {
+         <span class="hidden-xs">@Html.ActionLink("Checkout", "Index", "Cart", new { returnUrl = Request.Url.PathAndQuery, menuCheckOutClicked = true }, new { @class = "btn btn-info btn-xs", disabled = "disabled",  onclick = "javascript:return false;"  })</span>
+    }
+    else
+    {
+        <span class="hidden-xs">@Html.ActionLink("Checkout", "Index", "Cart", new { returnUrl = Request.Url.PathAndQuery, menuCheckOutClicked = true }, new { @class = "btn btn-info btn-xs", id = "btnMenuCheckout" })</span>
+    }
+   
+</div>

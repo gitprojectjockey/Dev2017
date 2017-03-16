@@ -1,0 +1,30 @@
+﻿@model OnlineShoppingStore.Domain.Entities.Product
+
+<div class="well">
+    <div class="hidden-xs">
+        <h3>
+            <strong>@Model.Name</strong>
+            <span class="pull-right label label-primary">@Model.Price.ToString("c")</span>
+        </h3>
+    </div>
+    <div class="visible-xs nav-font-size-mobile">
+        <strong>@Model.Name</strong>
+        <br />
+        <span class="pull-right label label-primary">@Model.Price.ToString("c")</span>
+        <br />
+    </div>
+
+    @using (Html.BeginForm("AddToCart", "Cart"))
+    {
+        @Html.AntiForgeryToken()
+        <div class="pull-right">
+            @Html.HiddenFor(p => p.ProductId)
+            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+            <span class="hidden-xs"><input type="submit" class="btn btn-success btn-xs" value="Add To Cart" /></span>
+        </div>
+
+        <span class="lead hidden-xs">@Model.Description</span>
+        <span class="lead visible-xs nav-font-size-mobile">@Model.Description</span>
+        <span class="visible-xs nav-font-size-mobile"><input type="submit" value="Add To Cart" class="submit-button-like-link" /></span>
+    }
+</div>

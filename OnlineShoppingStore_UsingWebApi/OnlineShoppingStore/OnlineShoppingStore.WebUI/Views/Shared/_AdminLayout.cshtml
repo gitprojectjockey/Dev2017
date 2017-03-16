@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - Online Shopping Store</title>
+    <script src="~/scripts/jquery-3.1.1.min.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <script src="~/scripts/bootstrap.min.js"></script>
+    <script src="~/scripts/onlineshoppingcart.js"></script>
+    @Styles.Render("~/content/css")
+</head>
+<body>
+    <div class="navbar navbar-inverse" role="navigation">
+        <a class="navbar-brand" href="#">
+            <span class="hidden-xs">Administration</span>
+            <span class="visible-xs nav-font-size-mobile">Administration</span>
+        </a>
+        <div class="pull-right navbar-brand">
+            @if (Request.IsAuthenticated)
+            {
+                <div class="visible-xs nav-font-size-mobile">
+                    @Html.ActionLink("Sign Out", "Logout", "User", null, new { @style = "color:lightblue;" })
+                </div>
+                <div class="hidden-xs nav-font-size-mobile">
+                    <span>
+                        @Html.ActionLink("Sign Out", "Logout", "User", null, new { @style = "color:lightblue; margin-right:10px" })
+                        @Html.Encode(User.Identity.Name)
+                    </span>
+                   
+                </div>
+            }
+        </div>
+    </div>
+    @if (TempData["SuccessfulMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessfulMessage"]</div>
+    }
+    else if (TempData["WarningMessage"] != null)
+    {
+        <div class="alert alert-danger">@TempData["WarningMessage"]</div>
+    }
+    else if (TempData["AuthorizationWarningMessage"] != null)
+    {
+        <div class="alert alert-danger">@TempData["AuthorizationWarningMessage"]</div>
+    }
+    <div>
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false);
+</body>
+</html>

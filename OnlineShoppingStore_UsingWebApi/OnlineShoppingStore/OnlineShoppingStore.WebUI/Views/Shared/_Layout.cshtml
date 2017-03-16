@@ -1,0 +1,60 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Online Shopping Store</title>
+
+
+    @*<script src="~/scripts/jquery-3.1.1.js"></script>
+    <script src="~/scripts/jquery.validate.js"></script>
+    <script src="~/scripts/jquery.validate.unobtrusive.js"></script>
+    <script src="~/scripts/jquery-3.1.1.intellisense.js"></script>
+   
+    <script src="~/scripts/bootstrap.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+    <script src="~/scripts/modernizr-2.8.3.js"></script>
+    <script src="~/scripts/onlineshoppingcart.js"></script>*@
+
+   
+
+
+   
+
+    @Styles.Render("~/content/css")
+</head>
+<body>
+    <div class="navbar navbar-inverse" role="navigation">
+        <a class="navbar-brand" href="#">
+            <span class="hidden-xs">Online Shopping Store</span>
+            <span class="visible-xs nav-font-size-mobile">Online</span>
+            <span class="visible-xs nav-font-size-mobile">Shopping</span>
+            <span class="visible-xs nav-font-size-mobile">Store</span>
+        </a>
+        
+        @Html.Action("CartSummary", "Cart", new { location = ViewData["NavigationLocation"] })
+    </div>
+
+    <div class="row panel">
+        <div id="Categories" class="col-lg-3">
+            <h2>Categories</h2>
+          
+            @Html.Action("Menu", "Nav")
+        </div>
+        <div class="col-lg-7">
+            @RenderBody()
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/onlineshoppingcartJs")
+
+    @RenderSection("scripts", required: false);
+
+</body>
+</html>

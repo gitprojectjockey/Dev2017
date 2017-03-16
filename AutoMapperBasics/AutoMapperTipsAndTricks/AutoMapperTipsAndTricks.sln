@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipsAndTricksData", "TipsAndTricksData\TipsAndTricksData.csproj", "{164AB3EC-23D8-449B-99F8-8CC790BA8D3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoMapperTipsAndTricksTest", "AutoMapperTipsAndTricksTest\AutoMapperTipsAndTricksTest.csproj", "{3B70E093-8C56-4200-93BD-C326606C47CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{164AB3EC-23D8-449B-99F8-8CC790BA8D3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164AB3EC-23D8-449B-99F8-8CC790BA8D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164AB3EC-23D8-449B-99F8-8CC790BA8D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164AB3EC-23D8-449B-99F8-8CC790BA8D3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B70E093-8C56-4200-93BD-C326606C47CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B70E093-8C56-4200-93BD-C326606C47CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B70E093-8C56-4200-93BD-C326606C47CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B70E093-8C56-4200-93BD-C326606C47CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

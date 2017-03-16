@@ -1,0 +1,92 @@
+﻿@model OnlineShoppingStore.WebUI.Models.CartIndexViewModel
+
+@{
+    ViewBag.Title = "Your Cart";
+    if (Model.Cart.CartItems.Count() == 0)
+    {
+        <h2>Your Cart Is Empty</h2>
+        @Html.Hidden("emptyCart", "Empty");
+    }
+    else
+    {
+        @Html.Hidden("emptyCart", "Not-Empty");
+        <h2>Your Cart</h2>
+    }
+}
+
+
+<table class="table hidden-xs">
+    <thead>
+        <tr>
+            <th>Quantity</th>
+            <th>Item</th>
+            <th class="text-right">Price</th>
+            <th class="text-right">Sub Total</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cartItem in Model.Cart.CartItems)
+        {
+            <tr>
+                <td class="text-left">@cartItem.Quantity</td>
+                <td class="text-left">@cartItem.Product.Name</td>
+                <td class="text-right">@cartItem.Product.Price.ToString("c")</td>
+                <td class="text-right">@((cartItem.Quantity * @cartItem.Product.Price).ToString("c"))</td>
+                <td class="text-right">@Html.ActionLink("Remove", "RemoveFromCart", "Cart", new { @productId = cartItem.Product.ProductId, @returnUrl = Model.ReturnUrl }, new { @class = "btn btn-info btn-xs" })</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4" class="text-right">
+                <strong>Total:</strong>
+            </td>
+            <td class="text-right">
+                <strong>@Model.Cart.ComputeTotalPrice()</strong>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<table class="visible-xs table table-mobile">
+    <thead>
+        <tr>
+            <th>Quantity</th>
+            <th>Item</th>
+            <th class="text-right">Price</th>
+            <th class="text-right">Sub Total</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cartItem in Model.Cart.CartItems)
+        {
+            <tr>
+                <td class="text-left">@cartItem.Quantity @Html.ActionLink("Remove", "RemoveFromCart", "Cart", new { @productId = cartItem.Product.ProductId, @returnUrl = Model.ReturnUrl }, new { @class = "submit-button-like-link" })</td>
+                <td class="text-left">@cartItem.Product.Name</td>
+                <td class="text-right">@cartItem.Product.Price.ToString("c")</td>
+                <td class="text-right">@((cartItem.Quantity * @cartItem.Product.Price).ToString("c"))</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="5" class="text-left">
+                <strong>Total: @Model.Cart.ComputeTotalPrice()</strong>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="text-right">
+    <a href=@Model.ReturnUrl value="Continue Shopping" class="btn btn-primary">Continue Shopping</a>
+    @Html.ActionLink("Checkout Now", "Checkout", "Cart", new { returnUrl = Model.ReturnUrl }, new { @class = "btn btn-primary", id = "checkOutSubmit" })
+</div>
+<div class="text-right" style="padding-top:15px">
+    <span>
+        @Html.ValidationMessage("CartIndexView", "Your cart is empty!", new { @class = "field-validation-error-empty-cart", id = "emptyCartValidationMessage", style = "display: none" })
+    </span>
+</div>
+
+
