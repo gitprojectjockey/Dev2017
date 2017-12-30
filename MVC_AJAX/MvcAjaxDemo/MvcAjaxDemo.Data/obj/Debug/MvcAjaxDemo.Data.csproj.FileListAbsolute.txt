@@ -17,3 +17,13 @@ C:\@EDevelopment\ESourceCode\@New_Study_2017\MVC_AJAX\MvcAjaxDemo\MvcAjaxDemo.Da
 C:\@EDevelopment\ESourceCode\@New_Study_2017\MVC_AJAX\MvcAjaxDemo\MvcAjaxDemo.Data\obj\Debug\MvcAjaxDemo.Data.csprojResolveAssemblyReference.cache
 C:\@EDevelopment\ESourceCode\@New_Study_2017\MVC_AJAX\MvcAjaxDemo\MvcAjaxDemo.Data\obj\Debug\MvcAjaxDemo.Data.dll
 C:\@EDevelopment\ESourceCode\@New_Study_2017\MVC_AJAX\MvcAjaxDemo\MvcAjaxDemo.Data\obj\Debug\MvcAjaxDemo.Data.pdb
+E:\GitProjectJockey\Dev2017\MVC_AJAX\MvcAjaxDemo\MvcAjaxDemo.Data\bin\Debug\MvcAjaxDemo.Data.dll.config
+E:\GitProjectJockey\Dev2017\MVC_AJAX\MvcAjaxDemo\MvcAjaxDemo.Data\bin\Debug\MvcAjaxDemo.Data.dll
+E:\GitProjectJockey\Dev2017\MVC_AJAX\MvcAjaxDemo\MvcAjaxDemo.Data\bin\Debug\MvcAjaxDemo.Data.pdb
+E:\GitProjectJockey\Dev2017\MVC_AJAX\MvcAjaxDemo\MvcAjaxDemo.Data\bin\Debug\EntityFramework.dll
+E:\GitProjectJockey\Dev2017\MVC_AJAX\MvcAjaxDemo\MvcAjaxDemo.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitProjectJockey\Dev2017\MVC_AJAX\MvcAjaxDemo\MvcAjaxDemo.Data\bin\Debug\EntityFramework.xml
+E:\GitProjectJockey\Dev2017\MVC_AJAX\MvcAjaxDemo\MvcAjaxDemo.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitProjectJockey\Dev2017\MVC_AJAX\MvcAjaxDemo\MvcAjaxDemo.Data\obj\Debug\MvcAjaxDemo.Data.csprojResolveAssemblyReference.cache
+E:\GitProjectJockey\Dev2017\MVC_AJAX\MvcAjaxDemo\MvcAjaxDemo.Data\obj\Debug\MvcAjaxDemo.Data.dll
+E:\GitProjectJockey\Dev2017\MVC_AJAX\MvcAjaxDemo\MvcAjaxDemo.Data\obj\Debug\MvcAjaxDemo.Data.pdb

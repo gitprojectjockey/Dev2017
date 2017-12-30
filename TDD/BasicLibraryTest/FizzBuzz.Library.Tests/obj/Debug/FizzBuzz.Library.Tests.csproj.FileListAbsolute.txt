@@ -1,8 +1,0 @@
-C:\@EDevelopment\ESourceCode\@New_Study_2017\Testing\TestingMvcControllers\FizzBuzz.Library.Tests\bin\Debug\FizzBuzz.Library.Tests.dll
-C:\@EDevelopment\ESourceCode\@New_Study_2017\Testing\TestingMvcControllers\FizzBuzz.Library.Tests\bin\Debug\FizzBuzz.Library.Tests.pdb
-C:\@EDevelopment\ESourceCode\@New_Study_2017\Testing\TestingMvcControllers\FizzBuzz.Library.Tests\bin\Debug\FizzBuzz.Library.dll
-C:\@EDevelopment\ESourceCode\@New_Study_2017\Testing\TestingMvcControllers\FizzBuzz.Library.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-C:\@EDevelopment\ESourceCode\@New_Study_2017\Testing\TestingMvcControllers\FizzBuzz.Library.Tests\bin\Debug\FizzBuzz.Library.pdb
-C:\@EDevelopment\ESourceCode\@New_Study_2017\Testing\TestingMvcControllers\FizzBuzz.Library.Tests\obj\Debug\FizzBuzz.Library.Tests.csprojResolveAssemblyReference.cache
-C:\@EDevelopment\ESourceCode\@New_Study_2017\Testing\TestingMvcControllers\FizzBuzz.Library.Tests\obj\Debug\FizzBuzz.Library.Tests.dll
-C:\@EDevelopment\ESourceCode\@New_Study_2017\Testing\TestingMvcControllers\FizzBuzz.Library.Tests\obj\Debug\FizzBuzz.Library.Tests.pdb
