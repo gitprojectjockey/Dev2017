@@ -1,0 +1,117 @@
+﻿@model WOW.SavesTool.WebApp.Models.EtfModel
+
+
+@{
+    var divClassButtonOffset = Model.CustomerModel.Rating >= 3 || Model.CustomerModel.Rating == 0 ? "col-md-6 col-md-offset-3" : "col-md-6 col-md-offset-4";
+}
+
+
+@{ Html.RenderPartial("~/Views/Customer/CustomerDetails.cshtml", Model.CustomerModel); }
+@{ Html.RenderAction("EtfDateSelection", "Etf"); }
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="alert alert-warning">
+            <div style="font-weight: bold;">
+                Rate Increase is @Model.CustomerModel.RateIncrease.ToString("C")
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="@divClassButtonOffset">
+        <div class="btn-group">
+            @Html.ActionLink("Call Center Offers", "Index", "CallCenterOffers", new { id = Model.CustomerModel.AccountNumber, saveLogId = Model.CustomerModel.SaveLogId }, new { @class = "btn btn-default" })
+
+            @Html.ActionLink("Front Counter Offers", "Index", "FrontCounterOffers", new { id = Model.CustomerModel.AccountNumber, saveLogId = Model.CustomerModel.SaveLogId }, new { @class = "btn btn-default" })
+
+            @if (Model.CustomerModel.Rating >= 3 || Model.CustomerModel.Rating == 0)
+            {
+                @Html.ActionLink("Loyalty Only Offers", "Index", "LoyaltyOffers", new { id = Model.CustomerModel.AccountNumber, saveLogId = Model.CustomerModel.SaveLogId }, new { @class = "btn btn-default" })
+            }
+            @Html.ActionLink("Cancel", "Index", "Home", null, new { @class = "btn btn-default" })
+        </div>
+        <input id="wow-contract-plan-start-date" type="hidden" value=@Model.StartDate />
+    </div>
+</div>
+
+@section scripts
+{
+    <script>
+        (function () {
+            var etfDatePicker = $('#wow-etf-date');
+            var etfDateDisplay = $('#wow-etf-date-display');
+            var getEtfButton = $('#wow-get-etf-button');
+            var resetEtfButton = $('#wow-etf-reset-button');
+            var etfDateSelection = $('#wow-etf-date-selection');
+            var selectedEtfDate = $('#wow-selected-etf-date');
+            var contractPlanStartDate = $('#wow-contract-plan-start-date');
+            var etfDataContainer = $('#wow-etf-data-container');
+            var etfPartialUrl = $('#wow-etf-data-partial-url');
+
+            //var partialContainer = $('#wow-partial-container');
+            //var offersButton = $('#wow-call-center-offers-button');
+            //var callCenterPartialUrl = $('#wow-call-center-offers-partial-url');
+            //var accountNumber = $('#wow-account-nunmber');
+
+            etfInit();
+
+            function etfInit() {
+                resetEtf();
+            }
+
+            //offersButton.on('click', function() {
+            //    etfDataContainer.hide();
+            //    partialContainer.html('Loading Offers');
+            //    console.log('offersButton click');
+            //    partialContainer.load(callCenterPartialUrl.val() , function (response, status) {
+            //        partialContainer.show();
+            //            if (status === "error") {
+            //                partialContainer.html('<div class="alert alert-danger">An error occurred loading offers. Please try again.</div>');
+            //            }
+            //        });
+            //});
+
+            etfDatePicker.on('changeDate', function () {
+                console.log('changeDate');
+                var date = etfDatePicker.datepicker('getFormattedDate');
+                selectedEtfDate.val(date);
+                etfDateDisplay.html(
+                    'Selected End date - ' + date
+                );
+                getEtfButton.show();
+            });
+
+            getEtfButton.on('click', function () {
+                etfDataContainer.html('Loading Etf...');
+                etfDataContainer.load(etfPartialUrl.val() +
+                    '?startDate=' + contractPlanStartDate.val() +
+                    '&endDate=' + selectedEtfDate.val(), function (response, status) {
+                        if (status === "error") {
+                            etfDataContainer.html('<div class="alert alert-danger">An error occurred loading etf data. Please try again.</div>');
+                        }
+                    });
+
+                etfDateSelection.hide();
+                getEtfButton.hide();
+                resetEtfButton.show();
+                etfDateDisplay.html('');
+            });
+
+            resetEtfButton.on('click', function () {
+                resetEtf();
+            });
+
+            function resetEtf() {
+                etfDatePicker.datepicker('update', new Date());
+                selectedEtfDate.val('');
+                getEtfButton.hide();
+                etfDateSelection.show();
+                resetEtfButton.hide();
+                etfDataContainer.html('');
+                etfDateDisplay.html('');
+            }
+
+        })();
+    </script>
+}
+

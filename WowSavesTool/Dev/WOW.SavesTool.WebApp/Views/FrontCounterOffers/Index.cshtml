@@ -1,0 +1,273 @@
+﻿@model WOW.SavesTool.WebApp.Models.FrontCounterOffersModel
+
+@{
+    ViewBag.Title = "Front Counter Offers";
+}
+
+@{ Html.RenderPartial("~/Views/Customer/CustomerDetails.cshtml", Model.CustomerModel); }
+
+@using (@Html.BeginForm("Index", "FrontCounterOffers", FormMethod.Post, new {id = "frontCounterOffers"}))
+{
+    <div class="row" style="margin-top: 25px;">
+        <div class="col-md-8  col-md-offset-2">
+            <div class="panel panel-primary">
+
+                <div class="panel-heading text-center">
+                    <h3>Front Counter Offers</h3>
+                </div>
+                <div class="panel-body ">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th colspan="2">Offer Levels</th>
+
+                            <th>Offered?</th>
+
+                            <th>Accepted?</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="success">
+                            <td rowspan="5">
+                                <h3>
+                                    Save Offer
+                                </h3>
+                            </td>
+                        </tr>
+                        <tr class="success">
+                            <td>
+                                @Model.GoodwillOffer.Amount.ToString("C") Customer Appreciation Credit
+                                @Html.HiddenFor(m => m.GoodwillOffer.Amount)
+                                @Html.HiddenFor(m => m.SavesLogId)
+                            </td>
+                            <td>
+                                @Html.CheckBoxFor(m => m.GoodwillOffer.WasOffered, new {id = "goodwill-offered"})
+                            </td>
+                            <td>
+                                @Html.CheckBoxFor(m => m.GoodwillOffer.WasAccepted, new {id = "goodwill-accepted"})
+                            </td>
+
+                        </tr>
+                        <tr class="success">
+                            <td>
+                                @if (Model.ProactiveOffer.Amount == 0)
+                                {
+                                    <span style="color: darkgray">@Model.ProactiveOffer.Amount.ToString("C") Discount for 12 Months</span>
+                                }
+                                else
+                                {
+                                    <span>@Model.ProactiveOffer.Amount.ToString("C") Discount for 12 Months</span>
+                                }
+                                @Html.HiddenFor(m => m.ProactiveOffer.Amount)
+                            </td>
+                            <td>
+                                @if (Model.ProactiveOffer.Amount == 0)
+                                {
+                                    @Html.CheckBoxFor(m => m.ProactiveOffer.WasOffered, new {id = "proactive-offered", disabled = "disabled"})
+                                }
+                                else
+                                {
+                                    @Html.CheckBoxFor(m => m.ProactiveOffer.WasOffered, new {id = "proactive-offered"})
+                                }
+                            </td>
+                            <td>
+                                @Html.CheckBoxFor(m => m.ProactiveOffer.WasAccepted, new {id = "proactive-accepted"})
+                            </td>
+                        </tr>
+
+                        <tr class="success">
+                            <td>
+                                @if (Model.Discount1Offer.Amount == 0)
+                                {
+                                    <span style="color: darkgray">@Model.Discount1Offer.Amount.ToString("C") for 12 Months</span>
+                                }
+                                else
+                                {
+                                    <span>@Model.Discount1Offer.Amount.ToString("C") for 12 Months</span>
+                                }
+                                @Html.HiddenFor(m => m.Discount1Offer.Amount)
+                            </td>
+                            <td>
+                                @if (Model.Discount1Offer.Amount == 0)
+                                {
+                                    @Html.CheckBoxFor(m => m.Discount1Offer.WasOffered, new {id = "discount1offer-offered", disabled = "disabled"})
+                                }
+                                else
+                                {
+                                    @Html.CheckBoxFor(m => m.Discount1Offer.WasOffered, new {id = "discount1offer-offered"})
+                                }
+                            </td>
+                            <td>
+                                @Html.CheckBoxFor(m => m.Discount1Offer.WasAccepted, new {id = "discount1offer-accepted"})
+                            </td>
+                        </tr>
+
+                        <tr class="success">
+                            <td>
+                                @if (Model.Loyalty1Offer.Amount == 0)
+                                {
+                                    <span style="color: darkgray"> @Model.Loyalty1Offer.Amount.ToString("C") for 12 Months</span>
+                                }
+                                else
+                                {
+                                    <span> @Model.Loyalty1Offer.Amount.ToString("C") for 12 Months</span>
+                                }
+                                @Html.HiddenFor(m => m.Loyalty1Offer.Amount)
+                            </td>
+                            <td>
+                                @if (Model.Loyalty1Offer.Amount == 0)
+                                {
+                                    @Html.CheckBoxFor(m => m.Loyalty1Offer.WasOffered, new {id = "loyalty1offer-offered", disabled = "disabled"})
+                                }
+                                else
+                                {
+                                    @Html.CheckBoxFor(m => m.Loyalty1Offer.WasOffered, new {id = "loyalty1offer-offered"})
+                                }
+                            </td>
+                            <td>
+                                @Html.CheckBoxFor(m => m.Loyalty1Offer.WasAccepted, new {id = "loyalty1offer-accepted"})
+                            </td>
+                        </tr>
+
+                        <tr class="danger">
+                            <td rowspan="3">
+                                <h3>
+                                    No Save
+                                </h3>
+                            </td>
+                        </tr>
+
+                        <tr class="danger">
+                            <td>
+                                Transfer to Loyalty
+                            </td>
+                            <td>
+                                @Html.CheckBoxFor(m => m.TransferToLoyalty.WasOffered, new {id = "transfer-offered"})
+                            </td>
+                            <td>
+                                @Html.CheckBoxFor(m => m.TransferToLoyalty.WasAccepted, new {id = "transfer-accepted"})
+                            </td>
+                        </tr>
+                        <tr class="danger">
+                            <td>
+                                Processed Customer Disconnect
+                            </td>
+                            <td>
+                                @*<input type="checkbox" id="offer6" name="offer6"/>*@
+                            </td>
+                            <td>
+                                @Html.CheckBoxFor(m => m.DisconnectAccepted, new {id = "disconnect-accepted"})
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="col-md-8  col-md-offset-9">
+                        <input type="submit" id="submitOffers" value="Submit" name="command" class="btn btn-default" />
+                        <input type="submit" id="cancelOffers" value="Cancel" name="command" class="btn btn-default" />
+                    </div>
+                    <span id="chkValidationMessage" class="alert alert-danger">
+                        Both offered and accepted must have at least one box checked.
+                    </span>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $(function () {
+                var offerList = Array({ "order": 0, "offerTypeId": "goodwill-offered" },
+                   { "order": 1, "offerTypeId": "proactive-offered" },
+                   { "order": 2, "offerTypeId": "discount1offer-offered" },
+                   { "order": 3, "offerTypeId": "loyalty1offer-offered" });
+
+                //All accepted check boxes are disabled
+                $('[id*="-accepted"]').not('#disconnect-accepted').each(function () {
+                    $(this).prop('disabled', true);
+                });
+
+                $("#chkValidationMessage").hide();
+
+                //Mutually-Exclusive Accepted
+                $('[id*="-accepted"]').change(function () {
+                    $('[id*="-accepted"]').not(this).attr('checked', false);
+                });
+
+                //Specific logic for transferred-offered checkbox
+                $('#transfer-offered').change(function () {
+
+                    if ($(this).is(':checked')) {
+
+                        var checkTest = false;
+                        $.each(offerList, function (index, value) {
+                            if ($('#' + value.offerTypeId).is(":checked")) {
+                                checkTest = true;
+                            }
+                        });
+                        if (!checkTest) {
+                            $(this).attr('checked', false);
+                            $('#transfer-offered').attr('checked', false);
+                            $('#transfer-accepted').attr('disabled', true);
+                            $('#transfer-accepted').attr('checked', false);
+                        } else {
+                            $('#transfer-accepted').attr('disabled', false);
+                        }
+                    } else {
+                        $('#transfer-accepted').attr('disabled', true);
+                        $('#transfer-accepted').attr('checked', false);
+                    }
+
+                });
+
+                //Enable accepted only when its offered is checked
+                //Also uncheck Transfer to Loyalty if no previous offers have been offered
+                $('[id*="-offered"]').not('#transfer-offered').change(function () {
+                    var offeredId = this.id.toString();
+                    var acceptedId = offeredId.replace('offered', 'accepted');
+
+                    if ($(this).is(":checked")) {
+                        $('#' + acceptedId).attr('disabled', false);
+                    } else {
+                        $('#' + acceptedId).prop('checked', false);
+                        $('#' + acceptedId).attr('disabled', true);
+
+                        var checkTest = false;
+                        $.each(offerList, function (index, value) {
+                            if ($('#' + value.offerTypeId).is(":checked")) {
+                                checkTest = true;
+                            }
+                        });
+
+                        if (!checkTest) {
+                            $('#transfer-offered').attr('checked', false);
+                            $('#transfer-accepted').attr('disabled', true);
+                            $('#transfer-accepted').attr('checked', false);
+                        }
+
+                    }
+                });
+
+                $("#submitOffers").click(function () {
+
+                    if ($("#disconnect-accepted").prop('checked')) {
+                        return true;
+                    }
+
+                    if ($('[id*="-offered"]:checked').length > 0 && $('[id*="-accepted"]:checked').length > 0) {
+                        return true;
+                    } else {
+                        $("#chkValidationMessage").show();
+                        return false;
+                    }
+                });
+            });
+        });
+
+    </script>
+}
+
+

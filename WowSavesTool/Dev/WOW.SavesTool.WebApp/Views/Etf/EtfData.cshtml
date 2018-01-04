@@ -1,0 +1,18 @@
+﻿@model WOW.SavesTool.WebApp.Models.EtfModel
+
+@if (Model.EtfAmount<= 0)
+{
+    <div class="alert alert-warning">
+        <p class="text-danger">
+            No ETF Applies.
+        </p>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning">
+        <p class="text-danger">
+            Early Termination Fee of @Model.EtfAmount.ToString("C") applies based on effective date of @Model.EndDate.ToLongDateString()
+        </p>
+    </div>
+}

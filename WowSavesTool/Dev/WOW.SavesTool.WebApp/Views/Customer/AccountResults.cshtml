@@ -1,0 +1,14 @@
+﻿@using Antlr.Runtime.Tree
+@model WOW.SavesTool.WebApp.Models.AccountResults
+
+<div class="alert alert-danger">
+    @Model.Message
+    <div class="row">
+        <div class="col-md-6 col-md-offset-11">
+            <span class="btn-group">
+                @Html.ActionLink("Ok", "Index", "Home",null, new {@class = "btn btn-default"})
+            </span>
+        </div>
+    </div>
+</div>
+

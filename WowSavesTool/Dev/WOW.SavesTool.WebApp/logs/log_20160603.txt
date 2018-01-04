@@ -1,0 +1,799 @@
+2016-06-03 07:52:52,809 [9] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9549955. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:02.9980000. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 08:19:33,827 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9400000. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 08:20:42,653 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9430000. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 08:25:33,194 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9440000. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 08:26:44,722 [8] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9580000. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 08:52:02,028 [5] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9440000. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 09:01:03,360 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9439944. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 09:05:56,533 [5] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+System.Data.SqlClient.SqlException: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server) ----> System.ComponentModel.Win32Exception: The network path was not found
+
+   --- End of inner ExceptionDetail stack trace ---
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInterna...).
+2016-06-03 09:06:24,713 [8] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9430000. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 09:10:43,511 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9439944. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 09:17:39,817 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 10.170.90.34:443
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 09:17:58,938 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9619962. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 09:20:17,350 [8] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9429943. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 09:29:06,182 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9560000. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 09:30:37,010 [12] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9590000. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 09:35:38,003 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9559956. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 09:41:09,711 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9419942. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 09:50:24,288 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9619962. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 09:59:40,714 [9] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9580000. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 10:15:11,983 [8] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9629963. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 10:18:56,528 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9579958. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 10:35:28,954 [8] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9550000. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 10:47:57,481 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9589959. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 10:53:51,303 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+WOW.Care.Contracts.CustomExceptions.CustomException: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown.
+   at WOW.Care.Core.Customer.CustomerSearchAllBilingSystems.CustomerDetails(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at WOW.Care.Services.Customer.<>c__DisplayClassd.<CustomerDetailsByAccountNumber>b__c()
+   at WOW.Care.Core.BaseClasses.ServiceBase.ExecuteFaultHandledOperation[T](Func`1 codetoExecute, IUserDbRequest userDbRequests, IValidator validator, Object request)
+   at WOW.Care.Services.Customer.CustomerDetailsByAccountNumber(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at Castle.Proxies.Invocations.ICustomer_CustomerDetailsByAccountNumber.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at WOW.Care.Common.Logging.LoggingInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.Abs...).
+2016-06-03 10:54:12,853 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9589959. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 10:58:23,348 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9429943. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 11:02:42,464 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+WOW.Care.Contracts.CustomExceptions.CustomException: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown.
+   at WOW.Care.Core.Customer.CustomerSearchAllBilingSystems.CustomerDetails(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at WOW.Care.Services.Customer.<>c__DisplayClassd.<CustomerDetailsByAccountNumber>b__c()
+   at WOW.Care.Core.BaseClasses.ServiceBase.ExecuteFaultHandledOperation[T](Func`1 codetoExecute, IUserDbRequest userDbRequests, IValidator validator, Object request)
+   at WOW.Care.Services.Customer.CustomerDetailsByAccountNumber(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at Castle.Proxies.Invocations.ICustomer_CustomerDetailsByAccountNumber.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at WOW.Care.Common.Logging.LoggingInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.Abs...).
+2016-06-03 11:03:01,326 [9] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9549955. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 11:08:23,190 [20] ERROR WOW.SaveTool.Data.CustomerRepository - System.TimeoutException: The request channel timed out while waiting for a reply after 00:00:02.9570000. Increase the timeout value passed to the call to Request or increase the SendTimeout value on the Binding. The time allotted to this operation may have been a portion of a longer timeout. ---> System.TimeoutException: The HTTP request to 'https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc' has exceeded the allotted timeout of 00:00:03. The time allotted to this operation may have been a portion of a longer timeout. ---> System.Net.WebException: The operation has timed out
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.HttpChannelUtilities.ProcessGetResponseWebException(WebException webException, HttpWebRequest request, HttpAbortReason abortReason)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.ProductQuery.IProductQuery.GetCustomerRating(CustomerRatingRequest customerRatingRequest)
+   at WOW.SaveTool.Data.CustomerRepository.<>c__DisplayClass5.<GetCustomerRatingData>b__4() in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+   at Polly.Policy.<>c__DisplayClass8_0`1.<Execute>b__0() in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Retry.RetryEngine.Implementation(Action action, IEnumerable`1 shouldRetryPredicates, Func`1 policyStateFactory) in C:\projects\polly\src\Polly.Shared\Retry\RetryEngine.cs:line 29
+   at Polly.RetrySyntax.<>c__DisplayClass3_0.<Retry>b__0(Action action, Context context) in C:\projects\polly\src\Polly.Shared\RetrySyntax.cs:line 65
+   at Polly.Policy.Execute[TResult](Func`1 action, Context context) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 103
+   at Polly.Policy.Execute[TResult](Func`1 action) in C:\projects\polly\src\Polly.Shared\Policy.cs:line 116
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerRatingData(String accountNumber) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 126
+2016-06-03 14:04:42,347 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+WOW.Care.Contracts.CustomExceptions.CustomException: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown.
+   at WOW.Care.Core.Customer.CustomerSearchAllBilingSystems.CustomerDetails(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at WOW.Care.Services.Customer.<>c__DisplayClassd.<CustomerDetailsByAccountNumber>b__c()
+   at WOW.Care.Core.BaseClasses.ServiceBase.ExecuteFaultHandledOperation[T](Func`1 codetoExecute, IUserDbRequest userDbRequests, IValidator validator, Object request)
+   at WOW.Care.Services.Customer.CustomerDetailsByAccountNumber(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at Castle.Proxies.Invocations.ICustomer_CustomerDetailsByAccountNumber.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at WOW.Care.Common.Logging.LoggingInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.Abs...).
+2016-06-03 16:27:01,733 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+WOW.Care.Contracts.CustomExceptions.CustomException: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown.
+   at WOW.Care.Core.Customer.CustomerSearchAllBilingSystems.CustomerDetails(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at WOW.Care.Services.Customer.<>c__DisplayClassd.<CustomerDetailsByAccountNumber>b__c()
+   at WOW.Care.Core.BaseClasses.ServiceBase.ExecuteFaultHandledOperation[T](Func`1 codetoExecute, IUserDbRequest userDbRequests, IValidator validator, Object request)
+   at WOW.Care.Services.Customer.CustomerDetailsByAccountNumber(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at Castle.Proxies.Invocations.ICustomer_CustomerDetailsByAccountNumber.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at WOW.Care.Common.Logging.LoggingInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.Abs...).
+2016-06-03 16:29:37,175 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.EndpointNotFoundException: There was no endpoint listening at https://apiexternalqa.wideopenwest.com/Enterprise/CareQuery/Customer.svc that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details. ---> System.Net.WebException: The remote name could not be resolved: 'apiexternalqa.wideopenwest.com'
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   --- End of inner exception stack trace ---
+
+Server stack trace: 
+   at System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+   at System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.SecurityChannelFactory`1.SecurityRequestChannel.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+   at System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+   at System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at WOW.SaveTool.Data.Customer.ICustomer.CustomerDetailsByAccountNumber(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at WOW.SaveTool.Data.CustomerRepository.GetCustomerInformation(String accountNumber, String username) in c:\@EricStuff\WOW_Development\WOW.SavesTool\Release2\Dev\WOW.SaveTool.Data\CustomerRepository.cs:line 61

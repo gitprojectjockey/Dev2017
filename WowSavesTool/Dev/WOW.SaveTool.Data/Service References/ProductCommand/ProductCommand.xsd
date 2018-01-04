@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wowway.com/Product/Product.API" elementFormDefault="qualified" targetNamespace="http://wowway.com/Product/Product.API" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="LogAccountNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="logAccountNumberRequest" nillable="true" type="tns:SaveLogAccountNumberRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SaveLogAccountNumberRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoginId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaveLogAccountNumberRequest" nillable="true" type="tns:SaveLogAccountNumberRequest" />
+  <xs:element name="LogAccountNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LogAccountNumberResult" nillable="true" type="tns:SaveLogAccountNumberResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SaveLogAccountNumberResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SaveLogId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SaveLogAccountNumberResponse" nillable="true" type="tns:SaveLogAccountNumberResponse" />
+  <xs:complexType name="SystemFaultException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SystemFaultException" nillable="true" type="tns:SystemFaultException" />
+  <xs:element name="LogCallAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="logCallActionRequest" nillable="true" type="tns:LogCallActionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="LogCallActionRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CallAction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SaveLogId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LogCallActionRequest" nillable="true" type="tns:LogCallActionRequest" />
+  <xs:element name="LogCallActionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogOffers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="logOffersRequest" nillable="true" type="tns:LogOffersRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="LogOffersRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CableOption" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CallAction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FiveYearDiscountAmount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="InternetOption" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Is12MonthContract" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Offers" nillable="true" type="tns:ArrayOfOfferList" />
+      <xs:element minOccurs="0" name="PhoneOption" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SaveLogId" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LogOffersRequest" nillable="true" type="tns:LogOffersRequest" />
+  <xs:complexType name="ArrayOfOfferList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OfferList" nillable="true" type="tns:OfferList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOfferList" nillable="true" type="tns:ArrayOfOfferList" />
+  <xs:complexType name="OfferList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsAccepted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsOffered" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OfferType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OfferList" nillable="true" type="tns:OfferList" />
+  <xs:element name="LogOffersResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

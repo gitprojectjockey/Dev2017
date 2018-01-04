@@ -1,0 +1,2 @@
+2017-03-23 10:27:54,606 [11] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: The range for account number is from 0 to 999999999
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).

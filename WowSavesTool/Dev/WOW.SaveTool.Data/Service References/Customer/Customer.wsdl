@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://wowway.com/Care/Query" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Customer" targetNamespace="http://wowway.com/Care/Query" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_ICustomer_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10 />
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy />
+        </sp:Wss10>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://wowway.com/Care/Query/Imports">
+      <xsd:import schemaLocation="https://apiexternalqa.wideopenwest.com/Enterprise/CareQuery/Customer.svc?xsd=xsd0" namespace="http://wowway.com/Care/Query" />
+      <xsd:import schemaLocation="https://apiexternalqa.wideopenwest.com/Enterprise/CareQuery/Customer.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" />
+      <xsd:import schemaLocation="https://apiexternalqa.wideopenwest.com/Enterprise/CareQuery/Customer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://apiexternalqa.wideopenwest.com/Enterprise/CareQuery/Customer.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://apiexternalqa.wideopenwest.com/Enterprise/CareQuery/Customer.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Types" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICustomer_CustomerSearchByAccountNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerSearchByAccountNumber" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByAccountNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerSearchByAccountNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByAccountNumber_DbFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q1:DbFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByAccountNumber_SecurityFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q2:SecurityFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByAccountNumber_WowCareSystemFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q3:WowCareSystemFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByAccountNumber_ParameterFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q4:ParameterFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByPhoneNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerSearchByPhoneNumber" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByPhoneNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerSearchByPhoneNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByPhoneNumber_ParameterFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q5:ParameterFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByPhoneNumber_SecurityFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q6:SecurityFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByPhoneNumber_WowCareSystemFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q7:WowCareSystemFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByPhoneNumber_DbFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q8:DbFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByNameAndAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerSearchByNameAndAddress" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByNameAndAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerSearchByNameAndAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByNameAndAddress_WowCareSystemFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q9:WowCareSystemFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByNameAndAddress_ParameterFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q10:ParameterFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByNameAndAddress_DbFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q11:DbFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByNameAndAddress_SecurityFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q12:SecurityFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByEmailAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerSearchByEmailAddress" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByEmailAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerSearchByEmailAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByEmailAddress_ParameterFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q13:ParameterFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByEmailAddress_WowCareSystemFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q14:WowCareSystemFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByEmailAddress_SecurityFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q15:SecurityFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerSearchByEmailAddress_DbFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q16:DbFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerDetailsByAccountNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerDetailsByAccountNumber" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerDetailsByAccountNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CustomerDetailsByAccountNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerDetailsByAccountNumber_WowCareSystemFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q17:WowCareSystemFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerDetailsByAccountNumber_SecurityFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q18:SecurityFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerDetailsByAccountNumber_DbFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q19:DbFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_CustomerDetailsByAccountNumber_ParameterFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q20:ParameterFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_PostedPaymentsByAccountNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:PostedPaymentsByAccountNumber" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_PostedPaymentsByAccountNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PostedPaymentsByAccountNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_PostedPaymentsByAccountNumber_DbFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q21:DbFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_PostedPaymentsByAccountNumber_WowCareSystemFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q22:WowCareSystemFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_PostedPaymentsByAccountNumber_ParameterFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q23:ParameterFaultException" />
+  </wsdl:message>
+  <wsdl:message name="ICustomer_PostedPaymentsByAccountNumber_SecurityFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Faults" name="detail" element="q24:SecurityFaultException" />
+  </wsdl:message>
+  <wsdl:portType name="ICustomer">
+    <wsdl:operation name="CustomerSearchByAccountNumber">
+      <wsdl:input wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByAccountNumber" message="tns:ICustomer_CustomerSearchByAccountNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByAccountNumberResponse" message="tns:ICustomer_CustomerSearchByAccountNumber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByAccountNumberDbFaultExceptionFault" name="DbFaultExceptionFault" message="tns:ICustomer_CustomerSearchByAccountNumber_DbFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByAccountNumberSecurityFaultExceptionFault" name="SecurityFaultExceptionFault" message="tns:ICustomer_CustomerSearchByAccountNumber_SecurityFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByAccountNumberWowCareSystemFaultExceptionFault" name="WowCareSystemFaultExceptionFault" message="tns:ICustomer_CustomerSearchByAccountNumber_WowCareSystemFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByAccountNumberParameterFaultExceptionFault" name="ParameterFaultExceptionFault" message="tns:ICustomer_CustomerSearchByAccountNumber_ParameterFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomerSearchByPhoneNumber">
+      <wsdl:input wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByPhoneNumber" message="tns:ICustomer_CustomerSearchByPhoneNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByPhoneNumberResponse" message="tns:ICustomer_CustomerSearchByPhoneNumber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByPhoneNumberParameterFaultExceptionFault" name="ParameterFaultExceptionFault" message="tns:ICustomer_CustomerSearchByPhoneNumber_ParameterFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByPhoneNumberSecurityFaultExceptionFault" name="SecurityFaultExceptionFault" message="tns:ICustomer_CustomerSearchByPhoneNumber_SecurityFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByPhoneNumberWowCareSystemFaultExceptionFault" name="WowCareSystemFaultExceptionFault" message="tns:ICustomer_CustomerSearchByPhoneNumber_WowCareSystemFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByPhoneNumberDbFaultExceptionFault" name="DbFaultExceptionFault" message="tns:ICustomer_CustomerSearchByPhoneNumber_DbFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomerSearchByNameAndAddress">
+      <wsdl:input wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByNameAndAddress" message="tns:ICustomer_CustomerSearchByNameAndAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByNameAndAddressResponse" message="tns:ICustomer_CustomerSearchByNameAndAddress_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByNameAndAddressWowCareSystemFaultExceptionFault" name="WowCareSystemFaultExceptionFault" message="tns:ICustomer_CustomerSearchByNameAndAddress_WowCareSystemFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByNameAndAddressParameterFaultExceptionFault" name="ParameterFaultExceptionFault" message="tns:ICustomer_CustomerSearchByNameAndAddress_ParameterFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByNameAndAddressDbFaultExceptionFault" name="DbFaultExceptionFault" message="tns:ICustomer_CustomerSearchByNameAndAddress_DbFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByNameAndAddressSecurityFaultExceptionFault" name="SecurityFaultExceptionFault" message="tns:ICustomer_CustomerSearchByNameAndAddress_SecurityFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomerSearchByEmailAddress">
+      <wsdl:input wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByEmailAddress" message="tns:ICustomer_CustomerSearchByEmailAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByEmailAddressResponse" message="tns:ICustomer_CustomerSearchByEmailAddress_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByEmailAddressParameterFaultExceptionFault" name="ParameterFaultExceptionFault" message="tns:ICustomer_CustomerSearchByEmailAddress_ParameterFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByEmailAddressWowCareSystemFaultExceptionFault" name="WowCareSystemFaultExceptionFault" message="tns:ICustomer_CustomerSearchByEmailAddress_WowCareSystemFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByEmailAddressSecurityFaultExceptionFault" name="SecurityFaultExceptionFault" message="tns:ICustomer_CustomerSearchByEmailAddress_SecurityFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerSearchByEmailAddressDbFaultExceptionFault" name="DbFaultExceptionFault" message="tns:ICustomer_CustomerSearchByEmailAddress_DbFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomerDetailsByAccountNumber">
+      <wsdl:input wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerDetailsByAccountNumber" message="tns:ICustomer_CustomerDetailsByAccountNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerDetailsByAccountNumberResponse" message="tns:ICustomer_CustomerDetailsByAccountNumber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerDetailsByAccountNumberWowCareSystemFaultExceptionFault" name="WowCareSystemFaultExceptionFault" message="tns:ICustomer_CustomerDetailsByAccountNumber_WowCareSystemFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerDetailsByAccountNumberSecurityFaultExceptionFault" name="SecurityFaultExceptionFault" message="tns:ICustomer_CustomerDetailsByAccountNumber_SecurityFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerDetailsByAccountNumberDbFaultExceptionFault" name="DbFaultExceptionFault" message="tns:ICustomer_CustomerDetailsByAccountNumber_DbFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/CustomerDetailsByAccountNumberParameterFaultExceptionFault" name="ParameterFaultExceptionFault" message="tns:ICustomer_CustomerDetailsByAccountNumber_ParameterFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PostedPaymentsByAccountNumber">
+      <wsdl:input wsaw:Action="http://wowway.com/Care/Query/ICustomer/PostedPaymentsByAccountNumber" message="tns:ICustomer_PostedPaymentsByAccountNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://wowway.com/Care/Query/ICustomer/PostedPaymentsByAccountNumberResponse" message="tns:ICustomer_PostedPaymentsByAccountNumber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/PostedPaymentsByAccountNumberDbFaultExceptionFault" name="DbFaultExceptionFault" message="tns:ICustomer_PostedPaymentsByAccountNumber_DbFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/PostedPaymentsByAccountNumberWowCareSystemFaultExceptionFault" name="WowCareSystemFaultExceptionFault" message="tns:ICustomer_PostedPaymentsByAccountNumber_WowCareSystemFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/PostedPaymentsByAccountNumberParameterFaultExceptionFault" name="ParameterFaultExceptionFault" message="tns:ICustomer_PostedPaymentsByAccountNumber_ParameterFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Care/Query/ICustomer/PostedPaymentsByAccountNumberSecurityFaultExceptionFault" name="SecurityFaultExceptionFault" message="tns:ICustomer_PostedPaymentsByAccountNumber_SecurityFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICustomer" type="tns:ICustomer">
+    <wsp:PolicyReference URI="#BasicHttpBinding_ICustomer_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CustomerSearchByAccountNumber">
+      <soap:operation soapAction="http://wowway.com/Care/Query/ICustomer/CustomerSearchByAccountNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DbFaultExceptionFault">
+        <soap:fault use="literal" name="DbFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SecurityFaultExceptionFault">
+        <soap:fault use="literal" name="SecurityFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="WowCareSystemFaultExceptionFault">
+        <soap:fault use="literal" name="WowCareSystemFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ParameterFaultExceptionFault">
+        <soap:fault use="literal" name="ParameterFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerSearchByPhoneNumber">
+      <soap:operation soapAction="http://wowway.com/Care/Query/ICustomer/CustomerSearchByPhoneNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ParameterFaultExceptionFault">
+        <soap:fault use="literal" name="ParameterFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SecurityFaultExceptionFault">
+        <soap:fault use="literal" name="SecurityFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="WowCareSystemFaultExceptionFault">
+        <soap:fault use="literal" name="WowCareSystemFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="DbFaultExceptionFault">
+        <soap:fault use="literal" name="DbFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerSearchByNameAndAddress">
+      <soap:operation soapAction="http://wowway.com/Care/Query/ICustomer/CustomerSearchByNameAndAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WowCareSystemFaultExceptionFault">
+        <soap:fault use="literal" name="WowCareSystemFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ParameterFaultExceptionFault">
+        <soap:fault use="literal" name="ParameterFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="DbFaultExceptionFault">
+        <soap:fault use="literal" name="DbFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SecurityFaultExceptionFault">
+        <soap:fault use="literal" name="SecurityFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerSearchByEmailAddress">
+      <soap:operation soapAction="http://wowway.com/Care/Query/ICustomer/CustomerSearchByEmailAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ParameterFaultExceptionFault">
+        <soap:fault use="literal" name="ParameterFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="WowCareSystemFaultExceptionFault">
+        <soap:fault use="literal" name="WowCareSystemFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SecurityFaultExceptionFault">
+        <soap:fault use="literal" name="SecurityFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="DbFaultExceptionFault">
+        <soap:fault use="literal" name="DbFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerDetailsByAccountNumber">
+      <soap:operation soapAction="http://wowway.com/Care/Query/ICustomer/CustomerDetailsByAccountNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WowCareSystemFaultExceptionFault">
+        <soap:fault use="literal" name="WowCareSystemFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SecurityFaultExceptionFault">
+        <soap:fault use="literal" name="SecurityFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="DbFaultExceptionFault">
+        <soap:fault use="literal" name="DbFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ParameterFaultExceptionFault">
+        <soap:fault use="literal" name="ParameterFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PostedPaymentsByAccountNumber">
+      <soap:operation soapAction="http://wowway.com/Care/Query/ICustomer/PostedPaymentsByAccountNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DbFaultExceptionFault">
+        <soap:fault use="literal" name="DbFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="WowCareSystemFaultExceptionFault">
+        <soap:fault use="literal" name="WowCareSystemFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ParameterFaultExceptionFault">
+        <soap:fault use="literal" name="ParameterFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SecurityFaultExceptionFault">
+        <soap:fault use="literal" name="SecurityFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Customer">
+    <wsdl:port name="BasicHttpBinding_ICustomer" binding="tns:BasicHttpBinding_ICustomer">
+      <soap:address location="https://apiexternalqa.wideopenwest.com/Enterprise/CareQuery/Customer.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

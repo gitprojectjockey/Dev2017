@@ -1,0 +1,26 @@
+﻿@model WOW.SavesTool.WebApp.Models.HomeModel
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="jumbotron">
+            <h2>Enter Account Number to Begin</h2>
+
+            @using (Html.BeginForm("Index", "Home"))
+            {
+                <div class="form-group">
+                    <div class="input-group">
+                        @Html.TextBoxFor(m => m.AccountNumber, new { @class = "form-control", @placeholder = "Enter Account Number" })
+                        <div class="input-group-btn">
+                            <input type="submit" id="submitAccount" value="Find Account" class="btn btn-default" />
+                        </div>
+                    </div>
+                    @if (ViewData.ModelState["AccountNumber"] != null && ViewData.ModelState["AccountNumber"].Errors.Any())
+                    {
+                        <span class="alert alert-danger">
+                            @Html.ValidationMessageFor(m => m.AccountNumber)
+                        </span>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>

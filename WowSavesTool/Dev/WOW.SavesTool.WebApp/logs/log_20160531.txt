@@ -1,0 +1,100 @@
+2016-05-31 09:04:05,371 [10] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 09:05:49,316 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 09:36:30,863 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 09:43:47,976 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 09:59:57,355 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 10:00:30,896 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 10:17:56,378 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+WOW.Care.Contracts.CustomExceptions.CustomException: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown.
+   at WOW.Care.Core.Customer.CustomerSearchAllBilingSystems.CustomerDetails(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at WOW.Care.Services.Customer.<>c__DisplayClassd.<CustomerDetailsByAccountNumber>b__c()
+   at WOW.Care.Core.BaseClasses.ServiceBase.ExecuteFaultHandledOperation[T](Func`1 codetoExecute, IUserDbRequest userDbRequests, IValidator validator, Object request)
+   at WOW.Care.Services.Customer.CustomerDetailsByAccountNumber(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at Castle.Proxies.Invocations.ICustomer_CustomerDetailsByAccountNumber.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at WOW.Care.Common.Logging.LoggingInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.Abs...).
+2016-05-31 11:39:23,299 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 11:45:12,390 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 12:02:00,984 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 12:34:24,799 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 13:13:10,940 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 13:28:17,860 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 13:39:28,065 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 13:43:46,773 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 13:49:43,695 [8] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 14:26:49,201 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 14:44:51,613 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 14:51:30,256 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 14:55:24,167 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 14:56:55,604 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 14:59:46,437 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 15:02:20,413 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 15:02:43,815 [10] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+WOW.Care.Contracts.CustomExceptions.CustomException: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown.
+   at WOW.Care.Core.Customer.CustomerSearchAllBilingSystems.CustomerDetails(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at WOW.Care.Services.Customer.<>c__DisplayClassd.<CustomerDetailsByAccountNumber>b__c()
+   at WOW.Care.Core.BaseClasses.ServiceBase.ExecuteFaultHandledOperation[T](Func`1 codetoExecute, IUserDbRequest userDbRequests, IValidator validator, Object request)
+   at WOW.Care.Services.Customer.CustomerDetailsByAccountNumber(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at Castle.Proxies.Invocations.ICustomer_CustomerDetailsByAccountNumber.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at WOW.Care.Common.Logging.LoggingInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.Abs...).
+2016-05-31 15:02:55,135 [10] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+WOW.Care.Contracts.CustomExceptions.CustomException: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown.
+   at WOW.Care.Core.Customer.CustomerSearchAllBilingSystems.CustomerDetails(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at WOW.Care.Services.Customer.<>c__DisplayClassd.<CustomerDetailsByAccountNumber>b__c()
+   at WOW.Care.Core.BaseClasses.ServiceBase.ExecuteFaultHandledOperation[T](Func`1 codetoExecute, IUserDbRequest userDbRequests, IValidator validator, Object request)
+   at WOW.Care.Services.Customer.CustomerDetailsByAccountNumber(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at Castle.Proxies.Invocations.ICustomer_CustomerDetailsByAccountNumber.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at WOW.Care.Common.Logging.LoggingInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.Abs...).
+2016-05-31 15:05:12,892 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 15:05:37,705 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 15:10:19,110 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 15:13:21,213 [7] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 15:16:09,468 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 15:33:56,984 [11] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 16:06:28,191 [5] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 17:18:03,213 [9] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[WOW.SaveTool.Data.Customer.ParameterFaultException]: Account number is required.
+ (Fault Detail is equal to WOW.SaveTool.Data.Customer.ParameterFaultException).
+2016-05-31 18:45:20,106 [6] ERROR WOW.SaveTool.Data.CustomerRepository - System.ServiceModel.FaultException`1[System.ServiceModel.ExceptionDetail]: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown. (Fault Detail is equal to An ExceptionDetail, likely created by IncludeExceptionDetailInFaults=true, whose value is:
+WOW.Care.Contracts.CustomExceptions.CustomException: Exception of type 'WOW.Care.Contracts.CustomExceptions.CustomException' was thrown.
+   at WOW.Care.Core.Customer.CustomerSearchAllBilingSystems.CustomerDetails(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at WOW.Care.Services.Customer.<>c__DisplayClassd.<CustomerDetailsByAccountNumber>b__c()
+   at WOW.Care.Core.BaseClasses.ServiceBase.ExecuteFaultHandledOperation[T](Func`1 codetoExecute, IUserDbRequest userDbRequests, IValidator validator, Object request)
+   at WOW.Care.Services.Customer.CustomerDetailsByAccountNumber(CustomerDetailsByAccountNumberRequest customerDetailsRequest)
+   at Castle.Proxies.Invocations.ICustomer_CustomerDetailsByAccountNumber.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at WOW.Care.Common.Logging.LoggingInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.Abs...).

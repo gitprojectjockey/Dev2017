@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WOW.Product.Contract.Fault" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WOW.Product.Contract.Fault" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductCommand/ProductCommand.svc?xsd=xsd0" namespace="http://wowway.com/Product/Product.API" />
+  <xs:complexType name="DbFaultException">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://wowway.com/Product/Product.API" base="q1:SystemFaultException">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DbFaultException" nillable="true" type="tns:DbFaultException" />
+  <xs:complexType name="SecurityFaultException">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://wowway.com/Product/Product.API" base="q2:SystemFaultException">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SecurityFaultException" nillable="true" type="tns:SecurityFaultException" />
+  <xs:complexType name="ParameterFaultException">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://wowway.com/Product/Product.API" base="q3:SystemFaultException">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ParameterFaultException" nillable="true" type="tns:ParameterFaultException" />
+</xs:schema>

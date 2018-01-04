@@ -1,0 +1,55 @@
+﻿body {
+    background-color: #f7f7f7;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 35px;
+    padding-top: 25px;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.wow-account-display-row {
+    margin-top: -4px;
+    border-bottom: 4px solid;
+}
+
+.wow-account-info-container .wow-account-info-row {
+    display: block;
+    padding: 3px;
+}
+
+.wow-account-info-row .fa {
+    padding-right: 8px;
+}
+
+.wow-account-info h4 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.text-wow-purple {
+    color: #4d394b;
+}
+.wow-account-box {
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 2px 5px 0 #000000, 0 2px 10px 0 #000000;
+    -ms-box-shadow: 0 2px 5px 0 #000000, 0 2px 10px 0 #000000;
+    box-shadow: 0 2px 5px 0 #000000, 0 2px 10px 0 #000000;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 10px 25px 10px 25px;
+    margin-top: 60px;
+}
+
+.wow-package-box {
+     padding: 10px 25px 10px 25px;
+    display: block;
+    margin-top: 60px;
+    overflow-y: auto;
+    overflow-x: visible;
+    max-height: 265px;
+    font-size: 11px;
+}

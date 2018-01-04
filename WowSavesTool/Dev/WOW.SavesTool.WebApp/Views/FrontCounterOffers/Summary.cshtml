@@ -1,0 +1,88 @@
+﻿@model WOW.SavesTool.WebApp.Models.FrontCounterOffersModel
+
+@{
+    ViewBag.Title = "Summary Page";
+}
+
+<div class="row" style="margin-top: 25px;">
+    <div class="col-md-8  col-md-offset-2">
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">
+                <h3>Front Counter Offers Summary</h3>
+            </div>
+            <div class="panel-body ">
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr class="success">
+                            <td rowspan="2">
+                                <h3>
+                                    Offers Made
+                                </h3>
+                            </td>
+                        </tr>
+                        <tr class="success">
+                            <td>
+                                <br />
+                                <ul>
+                                    <li style="@(Model.GoodwillOffer.WasOffered ? "display:inline;" : "display:none;")">
+                                        @Model.GoodwillOffer.Amount.ToString("C") Customer Appreciation Credit <br /><br />
+                                    </li>
+                                    <li style="@(Model.ProactiveOffer.WasOffered ? "display:inline;" : "display:none;")">
+                                        @Model.ProactiveOffer.Amount.ToString("C") Discount for 12 Months <br /><br />
+                                    </li>
+                                    <li style="@(Model.Discount1Offer.WasOffered ? "display:inline;" : "display:none;")">
+                                        @Model.Discount1Offer.Amount.ToString("C") Discount for 12 Months <br/><br/>
+                                    </li>
+                                    <li style="@(Model.Loyalty1Offer.WasOffered ? "display:inline;" : "display:none;")">
+                                        @Model.Discount1Offer.Amount.ToString("C") Discount for 12 Months <br /><br />
+                                    </li>
+                                    <li style="@(Model.TransferToLoyalty.WasOffered ? "display:inline;" : "display:none;")">
+                                        Transfered to Loyalty<br /><br />
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="danger">
+                            <td rowspan="2" style="vertical-align: central">
+                                <h3>
+                                    Result
+                                </h3>
+                            </td>
+                        </tr>
+                        <tr class="danger">
+                            <td>
+                                <br />
+                                <ul>
+                                    <li style="@(Model.GoodwillOffer.WasAccepted ? "display:inline;" : "display:none;")">
+                                        @Model.GoodwillOffer.Amount.ToString("C") Customer Appreciation Credit <br/><br/>
+                                    </li>
+                                    <li style="@(Model.ProactiveOffer.WasAccepted ? "display:inline;" : "display:none;")">
+                                        @Model.ProactiveOffer.Amount.ToString("C") Discount for 12 Months <br/><br/>
+                                    </li>
+                                    <li style="@(Model.Discount1Offer.WasAccepted ? "display:inline;" : "display:none;")">
+                                        @Model.Discount1Offer.Amount.ToString("C") Discount for 12 Months <br/><br/>
+                                    </li>
+                                    <li style="@(Model.Loyalty1Offer.WasAccepted ? "display:inline;" : "display:none;")">
+                                        @Model.Discount1Offer.Amount.ToString("C") Discount for 12 Months <br /><br />
+                                    </li>
+                                    <li style="@(Model.TransferToLoyalty.WasAccepted ? "display:inline;" : "display:none;")">
+                                        Transfered to Loyalty<br/><br/>
+                                    </li>
+                                    <li style="@(Model.DisconnectAccepted ? "display:inline;" : "display:none;")">
+                                        Processed Customer Disconnect<br /><br />
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <h4 class="text-left">Thank you for your submission</h4>
+                    <div class="col-md-8  col-md-offset-9">
+                        <input type="button" id="returnToSearch" value="Back to Search" class="btn btn-default" onclick="location.href = '@Url.Action("Index", "Home")'" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

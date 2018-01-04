@@ -1,0 +1,126 @@
+﻿@using WOW.SavesTool.WebApp.Models
+@model CustomerModel
+
+@{
+    Layout = null;
+}
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                <div class="wow-account-box">
+                    <div class="wow-account-info">
+                        <h4 class="text-center">@Model.FirstName @Model.LastName</h4>
+
+                        <input id="wow-account-nunmber" type="hidden" value="@Model.AccountNumber" />
+                        <input id="wow-etf-data-partial-url" type="hidden" value="@Url.Content("~/Etf/EtfData")" />
+                     
+
+                        @if (!string.IsNullOrEmpty(Model.AddressLine1))
+                        {
+                            <h5 class="text-center">
+                                @Model.AddressLine1
+                                @Model.AddressLine2
+                                @Model.City,
+                                @Model.State
+                                @Model.Postalcode
+                            </h5>
+                        }
+
+                        <hr />
+                        <div class="wow-account-info-container">
+
+                            @if (!string.IsNullOrEmpty(Model.ContactEmail))
+                            {
+                                <span class="wow-account-info-row">
+                                    <i class="fa fa-envelope-o text-wow-purple"></i>
+                                    @Model.ContactEmail
+                                </span>
+                            }
+
+
+                            <span class="wow-account-info-row">
+                                @if (!string.IsNullOrEmpty(Model.DayTimePhoneNumber) || !string.IsNullOrEmpty(Model.EveningPhoneNumber))
+                                {
+                                    <i class="fa fa-phone text-wow-purple"></i>
+
+                                    if (!string.IsNullOrEmpty(Model.DayTimePhoneNumber))
+                                    {
+                                        <span>
+                                            @Model.DayTimePhoneNumber
+                                        </span>
+                                    }
+
+                                    if (!string.IsNullOrEmpty(Model.DayTimePhoneNumber) && !string.IsNullOrEmpty(Model.EveningPhoneNumber))
+                                    {
+                                        <span>,</span>
+                                    }
+
+                                    if (!string.IsNullOrEmpty(Model.EveningPhoneNumber))
+                                    {
+                                        <span>
+                                            @Model.EveningPhoneNumber
+                                        </span>
+                                    }
+                                }
+                            </span>
+
+                            <span class="wow-account-info-row">
+                                <i class="fa fa-industry text-wow-purple"></i>
+                                @Model.BillingSystem Account # @Model.AccountNumber
+                            </span>
+                            <span class="wow-account-info-row @(@Model.AccountStatus == "ACTIVE" ? "text-success" : "text-danger")">
+                                @if (Model.AccountStatus == "ACTIVE")
+                                {
+                                    <i class="fa fa-check"></i>
+                                }
+                                @if (Model.AccountStatus == "INACTIVE")
+                                {
+                                    <i class="fa fa-times"></i>
+                                }
+
+                                @Model.AccountStatus
+                            </span>
+                            <span class="wow-account-info-row">
+                                Last Statement Total @Model.LastStatementAmount.ToString("C")
+                            </span>
+                            <span class="wow-account-info-row">
+                                Current Balance @Model.CurrentBalance.ToString("C")
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                <div class="wow-package-box">
+                    <h4>Packages/Plans</h4>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Start</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (PackageInfoModel p in Model.PackageInfoModels)
+                            {
+                                <tr>
+                                    <td>@p.Id</td>
+                                    <td>@p.Name</td>
+                                    <td>@p.Type</td>
+                                    <td>@p.StartDate.ToShortDateString()</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />

@@ -1,0 +1,88 @@
+﻿@model WOW.SavesTool.WebApp.Models.LoyaltyOffersModel
+
+@{
+    ViewBag.Title = "Summary Page";
+}
+
+<div class="row" style="margin-top: 25px;">
+    <div class="col-md-8  col-md-offset-2">
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">
+                <h3>Loyalty Only Offers Summary</h3>
+            </div>
+            <div class="panel-body ">
+                <table class="table table-bordered">
+
+                    <tbody>
+                        <tr class="success">
+                            <td rowspan="2">
+                                <h3>
+                                    Offers Made
+                                </h3>
+                            </td>
+                        </tr>
+                        <tr class="success">
+                            <td>
+                                <br />
+                                <ul>
+                                    <li style="@(Model.Loyalty1Offer.WasOffered ? "display:inline;" : "display:none;")">
+                                        @Model.Loyalty1Offer.Amount.ToString("C") Discount for 12 Months <br /><br />
+                                    </li>
+                                    <li style="@(Model.Loyalty2Offer.WasOffered ? "display:inline;" : "display:none;")">
+                                        @Model.Loyalty2Offer.Amount.ToString("C") Discount for 12 Months <br /><br />
+                                    </li>
+                                    <li style="@(Model.ContractOffer.WasOffered ? "display:inline;" : "display:none;")">
+                                        Contract Offered<br /><br />
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="danger">
+                            <td rowspan="2" style="vertical-align: central">
+                                <h3>
+                                    Result
+                                </h3>
+                            </td>
+                        </tr>
+                        <tr class="danger">
+                            <td>
+                                <br />
+                                <ul>
+                                    <li style="@(Model.Loyalty1Offer.WasAccepted ? "display:inline;" : "display:none;")">
+                                        @Model.Loyalty1Offer.Amount.ToString("C") Discount for 12 Months <br /><br />
+                                    </li>
+                                    <li style="@(Model.Loyalty2Offer.WasAccepted ? "display:inline;" : "display:none;")">
+                                        @Model.Loyalty2Offer.Amount.ToString("C") Discount for 12 Months <br /><br />
+                                    </li>
+                                    <li style="@(Model.ContractOffer.WasAccepted ? "display:inline;" : "display:none;")">
+                                        <p style="text-indent: -30px;">
+                                            <b>Contract Offered:</b><br /><br />
+                                            Selected HSD Speed: <strong>@Model.SelectedHsd</strong><br /><br />
+                                            Selected Cable Size: <strong>@Model.SelectedCable</strong><br /><br />
+                                            Selected Phone Option: <strong>@Model.SelectedPhone</strong><br /><br />
+                                            <span><strong>$10</strong> Off for 12 Month Plan</span><br /><br />
+                                            5 Year Discount Amount: <strong>@Model.SelectedFiveYearDiscountAmt</strong>
+                                        </p>
+                                    </li>
+                                    <li style="@(Model.CustomerCallBackAccepted ? "display:inline;" : "display:none;")">
+                                        Customer Will Call Back<br /><br />
+                                    </li>
+                                    <li style="@(Model.DisconnectAccepted ? "display:inline;" : "display:none;")">
+                                        Processed Customer Disconnect<br /><br />
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    <h4 class="text-left">Thank you for your submission</h4>
+                    <div class="col-md-8  col-md-offset-9">
+                        <input type="button" id="btnCall" value="Back to Search" class="btn btn-default" onclick="location.href = '@Url.Action("Index", "Home")'" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

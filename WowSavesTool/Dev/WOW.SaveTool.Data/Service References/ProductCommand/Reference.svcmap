@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1730e244-7b72-4744-8bf3-cec6ce024e95" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address=" https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductCommand/ProductCommand.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProductCommand.xsd" MetadataType="Schema" ID="3f670f40-f249-44d0-add3-4e4713c4dabb" SourceId="1" SourceUrl="https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductCommand/ProductCommand.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProductCommand.wsdl" MetadataType="Wsdl" ID="05ba5e75-434c-411c-af34-72333598a622" SourceId="1" SourceUrl="https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductCommand/ProductCommand.svc?wsdl" />
+    <MetadataFile FileName="ProductCommand2.xsd" MetadataType="Schema" ID="3a0650c4-b6ff-46e8-b183-13a0cb87ad55" SourceId="1" SourceUrl="https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductCommand/ProductCommand.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProductCommand.disco" MetadataType="Disco" ID="d89afed4-1d63-4560-a245-37fe3f3c7d77" SourceId="1" SourceUrl="https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductCommand/ProductCommand.svc?disco" />
+    <MetadataFile FileName="ProductCommand1.xsd" MetadataType="Schema" ID="8602cd7a-8f3a-4fd0-86e0-e0deaf47edd2" SourceId="1" SourceUrl="https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductCommand/ProductCommand.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

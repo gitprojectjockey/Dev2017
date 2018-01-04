@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://wowway.com/Product/Product.API" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProductQuery" targetNamespace="http://wowway.com/Product/Product.API" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IProductQuery_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax />
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp />
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10 />
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss10 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy />
+        </sp:Wss10>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://wowway.com/Product/Product.API/Imports">
+      <xsd:import schemaLocation="https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc?xsd=xsd0" namespace="http://wowway.com/Product/Product.API" />
+      <xsd:import schemaLocation="https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WOW.Product.Contract.Fault" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProductQuery_GetEtfByPackage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEtfByPackage" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetEtfByPackage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEtfByPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetCustomerRating_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerRating" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetCustomerRating_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerRatingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetCustomerRating_ParameterFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WOW.Product.Contract.Fault" name="detail" element="q1:ParameterFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetCustomerRating_DbFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WOW.Product.Contract.Fault" name="detail" element="q2:DbFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetCustomerRating_SecurityFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WOW.Product.Contract.Fault" name="detail" element="q3:SecurityFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetCustomerRating_SystemFaultExceptionFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:SystemFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetOffers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOffers" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetOffers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOffersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetOffers_SystemFaultExceptionFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:SystemFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetOffers_ParameterFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WOW.Product.Contract.Fault" name="detail" element="q4:ParameterFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetOffers_DbFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WOW.Product.Contract.Fault" name="detail" element="q5:DbFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetOffers_SecurityFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WOW.Product.Contract.Fault" name="detail" element="q6:SecurityFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetRateIncrease_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRateIncrease" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetRateIncrease_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRateIncreaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetRateIncrease_SecurityFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WOW.Product.Contract.Fault" name="detail" element="q7:SecurityFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetRateIncrease_SystemFaultExceptionFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:SystemFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetRateIncrease_DbFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WOW.Product.Contract.Fault" name="detail" element="q8:DbFaultException" />
+  </wsdl:message>
+  <wsdl:message name="IProductQuery_GetRateIncrease_ParameterFaultExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WOW.Product.Contract.Fault" name="detail" element="q9:ParameterFaultException" />
+  </wsdl:message>
+  <wsdl:portType name="IProductQuery">
+    <wsdl:operation name="GetEtfByPackage">
+      <wsdl:input wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetEtfByPackage" message="tns:IProductQuery_GetEtfByPackage_InputMessage" />
+      <wsdl:output wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetEtfByPackageResponse" message="tns:IProductQuery_GetEtfByPackage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerRating">
+      <wsdl:input wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetCustomerRating" message="tns:IProductQuery_GetCustomerRating_InputMessage" />
+      <wsdl:output wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetCustomerRatingResponse" message="tns:IProductQuery_GetCustomerRating_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetCustomerRatingParameterFaultExceptionFault" name="ParameterFaultExceptionFault" message="tns:IProductQuery_GetCustomerRating_ParameterFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetCustomerRatingDbFaultExceptionFault" name="DbFaultExceptionFault" message="tns:IProductQuery_GetCustomerRating_DbFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetCustomerRatingSecurityFaultExceptionFault" name="SecurityFaultExceptionFault" message="tns:IProductQuery_GetCustomerRating_SecurityFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetCustomerRatingSystemFaultExceptionFault" name="SystemFaultExceptionFault" message="tns:IProductQuery_GetCustomerRating_SystemFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOffers">
+      <wsdl:input wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetOffers" message="tns:IProductQuery_GetOffers_InputMessage" />
+      <wsdl:output wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetOffersResponse" message="tns:IProductQuery_GetOffers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetOffersSystemFaultExceptionFault" name="SystemFaultExceptionFault" message="tns:IProductQuery_GetOffers_SystemFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetOffersParameterFaultExceptionFault" name="ParameterFaultExceptionFault" message="tns:IProductQuery_GetOffers_ParameterFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetOffersDbFaultExceptionFault" name="DbFaultExceptionFault" message="tns:IProductQuery_GetOffers_DbFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetOffersSecurityFaultExceptionFault" name="SecurityFaultExceptionFault" message="tns:IProductQuery_GetOffers_SecurityFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRateIncrease">
+      <wsdl:input wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetRateIncrease" message="tns:IProductQuery_GetRateIncrease_InputMessage" />
+      <wsdl:output wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetRateIncreaseResponse" message="tns:IProductQuery_GetRateIncrease_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetRateIncreaseSecurityFaultExceptionFault" name="SecurityFaultExceptionFault" message="tns:IProductQuery_GetRateIncrease_SecurityFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetRateIncreaseSystemFaultExceptionFault" name="SystemFaultExceptionFault" message="tns:IProductQuery_GetRateIncrease_SystemFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetRateIncreaseDbFaultExceptionFault" name="DbFaultExceptionFault" message="tns:IProductQuery_GetRateIncrease_DbFaultExceptionFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://wowway.com/Product/Product.API/IProductQuery/GetRateIncreaseParameterFaultExceptionFault" name="ParameterFaultExceptionFault" message="tns:IProductQuery_GetRateIncrease_ParameterFaultExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IProductQuery" type="tns:IProductQuery">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IProductQuery_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEtfByPackage">
+      <soap:operation soapAction="http://wowway.com/Product/Product.API/IProductQuery/GetEtfByPackage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerRating">
+      <soap:operation soapAction="http://wowway.com/Product/Product.API/IProductQuery/GetCustomerRating" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ParameterFaultExceptionFault">
+        <soap:fault use="literal" name="ParameterFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="DbFaultExceptionFault">
+        <soap:fault use="literal" name="DbFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SecurityFaultExceptionFault">
+        <soap:fault use="literal" name="SecurityFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SystemFaultExceptionFault">
+        <soap:fault use="literal" name="SystemFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetOffers">
+      <soap:operation soapAction="http://wowway.com/Product/Product.API/IProductQuery/GetOffers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SystemFaultExceptionFault">
+        <soap:fault use="literal" name="SystemFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ParameterFaultExceptionFault">
+        <soap:fault use="literal" name="ParameterFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="DbFaultExceptionFault">
+        <soap:fault use="literal" name="DbFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SecurityFaultExceptionFault">
+        <soap:fault use="literal" name="SecurityFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRateIncrease">
+      <soap:operation soapAction="http://wowway.com/Product/Product.API/IProductQuery/GetRateIncrease" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SecurityFaultExceptionFault">
+        <soap:fault use="literal" name="SecurityFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SystemFaultExceptionFault">
+        <soap:fault use="literal" name="SystemFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="DbFaultExceptionFault">
+        <soap:fault use="literal" name="DbFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ParameterFaultExceptionFault">
+        <soap:fault use="literal" name="ParameterFaultExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProductQuery">
+    <wsdl:port name="BasicHttpBinding_IProductQuery" binding="tns:BasicHttpBinding_IProductQuery">
+      <soap:address location="https://apiexternaldev.wideopenwest.com/Enterprise/WOWProduct/ProductQuery/ProductQuery.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="WOW.SavesTool.WebApp.MvcApplication" Language="C#" %>

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wowway.com/Care/Query" elementFormDefault="qualified" targetNamespace="http://wowway.com/Care/Query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://apiexternalqa.wideopenwest.com/Enterprise/CareQuery/Customer.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://apiexternalqa.wideopenwest.com/Enterprise/CareQuery/Customer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="https://apiexternalqa.wideopenwest.com/Enterprise/CareQuery/Customer.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Types" />
+  <xs:element name="CustomerSearchByAccountNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerSearchByAccountNumberRequest" nillable="true" type="tns:CustomerSearchByAccountNumberRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CustomerSearchByAccountNumberRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingSystem" type="tns:BillingSystem" />
+      <xs:element minOccurs="0" name="MarketId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerSearchByAccountNumberRequest" nillable="true" type="tns:CustomerSearchByAccountNumberRequest" />
+  <xs:simpleType name="BillingSystem">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Icoms" />
+      <xs:enumeration value="Usha" />
+      <xs:enumeration value="Comporium" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="BillingSystem" nillable="true" type="tns:BillingSystem" />
+  <xs:element name="CustomerSearchByAccountNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerSearchByAccountNumberResult" nillable="true" type="tns:CustomerSearchResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CustomerSearchResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Customers" nillable="true" type="tns:ArrayOfCustomer" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerSearchResponse" nillable="true" type="tns:CustomerSearchResponse" />
+  <xs:complexType name="ArrayOfCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Customer" nillable="true" type="tns:Customer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomer" nillable="true" type="tns:ArrayOfCustomer" />
+  <xs:complexType name="Customer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AccountStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApartmentNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingSystem" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerSegmentationValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DaytimePhone" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EmailAdresses" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="EveningPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StreetAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer" />
+  <xs:element name="CustomerSearchByPhoneNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerSearchByPhoneNumberRequest" nillable="true" type="tns:CustomerSearchByPhoneNumberRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CustomerSearchByPhoneNumberRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillingSystem" type="tns:BillingSystem" />
+      <xs:element minOccurs="0" name="MarketId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerSearchByPhoneNumberRequest" nillable="true" type="tns:CustomerSearchByPhoneNumberRequest" />
+  <xs:element name="CustomerSearchByPhoneNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerSearchByPhoneNumberResult" nillable="true" type="tns:CustomerSearchResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomerSearchByNameAndAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerSearchByNameAndAddressRequest" nillable="true" type="tns:CustomerSearchByNameAndAddressRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CustomerSearchByNameAndAddressRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillingSystem" type="tns:BillingSystem" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerType" type="tns:CustomerType" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerSearchByNameAndAddressRequest" nillable="true" type="tns:CustomerSearchByNameAndAddressRequest" />
+  <xs:simpleType name="CustomerType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Residential" />
+      <xs:enumeration value="Business" />
+      <xs:enumeration value="Unknown" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CustomerType" nillable="true" type="tns:CustomerType" />
+  <xs:element name="CustomerSearchByNameAndAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerSearchByNameAndAddressResult" nillable="true" type="tns:CustomerSearchResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomerSearchByEmailAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerSearchByEmailAddress" nillable="true" type="tns:CustomerSearchByEmailAddressRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CustomerSearchByEmailAddressRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BillingSystem" type="tns:BillingSystem" />
+      <xs:element minOccurs="0" name="EmailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerSearchByEmailAddressRequest" nillable="true" type="tns:CustomerSearchByEmailAddressRequest" />
+  <xs:element name="CustomerSearchByEmailAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerSearchByEmailAddressResult" nillable="true" type="tns:CustomerSearchResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomerDetailsByAccountNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerDetailsRequest" nillable="true" type="tns:CustomerDetailsByAccountNumberRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CustomerDetailsByAccountNumberRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingSystem" type="tns:BillingSystem" />
+      <xs:element minOccurs="0" name="MarketId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Services" nillable="true" type="tns:ArrayOfService" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerDetailsByAccountNumberRequest" nillable="true" type="tns:CustomerDetailsByAccountNumberRequest" />
+  <xs:complexType name="ArrayOfService">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Service" type="tns:Service" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfService" nillable="true" type="tns:ArrayOfService" />
+  <xs:simpleType name="Service">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Account" />
+      <xs:enumeration value="ServiceAddress" />
+      <xs:enumeration value="Billing">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Cable">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Internet">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Phone">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Package">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Equipment">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="OtherAttributes">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Service" nillable="true" type="tns:Service" />
+  <xs:element name="CustomerDetailsByAccountNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CustomerDetailsByAccountNumberResult" nillable="true" type="tns:CustomerDetailsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CustomerDetailsResponse">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Types" minOccurs="0" name="Account" nillable="true" type="q2:AccountInfo">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Types" minOccurs="0" name="Billing" nillable="true" type="q3:BillingInfo">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BillingSystem" type="tns:BillingSystem" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Types" minOccurs="0" name="Cable" nillable="true" type="q4:CableInfo">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Types" minOccurs="0" name="Equipments" nillable="true" type="q5:ArrayOfEquipmentInfo">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Types" minOccurs="0" name="Internet" nillable="true" type="q6:InternetInfo">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Types" minOccurs="0" name="OtherAttributes" nillable="true" type="q7:OtherInfo">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Types" minOccurs="0" name="Packages" nillable="true" type="q8:ArrayOfPackageInfo">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Types" minOccurs="0" name="Phone" nillable="true" type="q9:PhoneInfo">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Types" minOccurs="0" name="ServiceAddress" nillable="true" type="q10:ServiceAddressInfo">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerDetailsResponse" nillable="true" type="tns:CustomerDetailsResponse" />
+  <xs:simpleType name="AutoPay">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Bank" />
+      <xs:enumeration value="CreditCard" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AutoPay" nillable="true" type="tns:AutoPay" />
+  <xs:element name="PostedPaymentsByAccountNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="postedPaymentRequest" nillable="true" type="tns:PostedPaymentRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PostedPaymentRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BeginDateTimeUTC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingSystem" type="tns:BillingSystem" />
+      <xs:element minOccurs="0" name="EndDateTimeUTC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarketId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PostedPaymentRequest" nillable="true" type="tns:PostedPaymentRequest" />
+  <xs:element name="PostedPaymentsByAccountNumberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PostedPaymentsByAccountNumberResult" nillable="true" type="tns:PostedPaymentResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PostedPaymentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WOW.Care.Contracts.Types" minOccurs="0" name="PostedPaymentItem" nillable="true" type="q11:PostedPaymentItem">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PostedPaymentResponse" nillable="true" type="tns:PostedPaymentResponse" />
+</xs:schema>

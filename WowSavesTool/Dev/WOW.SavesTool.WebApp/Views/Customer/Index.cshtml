@@ -1,0 +1,48 @@
+﻿@model WOW.SavesTool.WebApp.Models.CustomerModel
+
+@{
+    ViewBag.Title = "Customer";
+    var divClassButtonOffset = Model.Rating >= 3 || Model.Rating ==0 ? "col-md-6 col-md-offset-3" : "col-md-6 col-md-offset-4";
+}
+
+@{ Html.RenderPartial("CustomerDetails", Model); }
+
+<br/>
+<div>
+    <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="alert alert-warning">
+            <div style="font-weight: bold;">
+                Customer is not under an annual agreement.<br />
+                No ETF Applies.
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="alert alert-warning">
+            <div style="font-weight: bold;">
+               Rate Increase is @Model.RateIncrease.ToString("C")
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="@divClassButtonOffset">
+        <div class="btn-group">
+            @Html.ActionLink("Call Center Offers", "Index", "CallCenterOffers", new { id = Model.AccountNumber, saveLogId = Model.SaveLogId }, new { @class = "btn btn-default" })
+
+            @Html.ActionLink("Front Counter Offers", "Index", "FrontCounterOffers", new { id = Model.AccountNumber, saveLogId = Model.SaveLogId}, new { @class = "btn btn-default" })
+
+            @if (Model.Rating >= 3 || Model.Rating ==0)
+            {
+                @Html.ActionLink("Loyalty Only Offers", "Index", "LoyaltyOffers", new { id = Model.AccountNumber, saveLogId = Model.SaveLogId }, new { @class = "btn btn-default" })
+            }
+            @Html.ActionLink("Cancel", "Index", "Home", null, new { @class = "btn btn-default" })
+        </div>
+    </div>
+</div>
+
+</div>

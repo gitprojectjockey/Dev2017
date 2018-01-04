@@ -1,0 +1,308 @@
+﻿@model WOW.SavesTool.WebApp.Models.LoyaltyOffersModel
+
+@{ Html.RenderPartial("~/Views/Customer/CustomerDetails.cshtml", Model.CustomerModel); }
+<style type="text/css">
+    tr.noBorder td {
+        border: 0 !important;
+        height: 60px;
+    }
+</style>
+@using (@Html.BeginForm("Index", "LoyaltyOffers", FormMethod.Post, new { id = "loyaltyOffers" }))
+{
+    <div class="row" style="margin-top: 25px;">
+        <div class="col-md-8  col-md-offset-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center">
+                    <h3>Loyalty Only Offers</h3>
+                </div>
+                <div class="panel-body ">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Offer Levels</th>
+
+                                <th>Offered?</th>
+
+                                <th>Accepted?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="success">
+                                <td rowspan="3">
+                                    <h3>
+                                        Discount<br />Saves Offer
+                                    </h3>
+                                </td>
+                            </tr>
+                            <tr class="success">
+                                <td>
+                                    @if (Model.Loyalty2Offer.Amount == 0)
+                                    {
+                                        <span style="color: darkgray">@Model.Loyalty1Offer.Amount.ToString("C") Customer Appreciation Credit</span>
+                                    }
+                                    else
+                                    {
+                                        <span>@Model.Loyalty1Offer.Amount.ToString("C") Customer Appreciation Credit</span>
+                                    }
+                                </td>
+                                <td>
+                                    @if (Model.Loyalty2Offer.Amount == 0)
+                                    {
+                                        @Html.CheckBoxFor(m => m.Loyalty1Offer.WasOffered, new { id = "loyalty1-offered", disabled = "disabled" })
+                                    }
+                                    else
+                                    {
+                                        @Html.CheckBoxFor(m => m.Loyalty1Offer.WasOffered, new { id = "loyalty1-offered" })
+                                    }
+                                </td>
+                                <td>
+                                    @Html.CheckBoxFor(m => m.Loyalty1Offer.WasAccepted, new { id = "loyalty1-accepted" })
+                                </td>
+                                @Html.HiddenFor(m => m.Loyalty1Offer.Amount)
+                                @Html.HiddenFor(m => m.SavesLogId)
+                            </tr>
+                            <tr class="success">
+                                <td>
+                                    @if (Model.Loyalty2Offer.Amount == 0)
+                                    {
+                                        <span style="color: darkgray">@Model.Loyalty2Offer.Amount.ToString("C") Discount for 12 Months</span>
+                                    }
+                                    else
+                                    {
+                                        <span>@Model.Loyalty2Offer.Amount.ToString("C") Discount for 12 Months</span>
+                                    }
+                                    @Html.HiddenFor(m => m.Loyalty2Offer.Amount)
+                                </td>
+                                <td>
+                                    @if (Model.Loyalty2Offer.Amount == 0)
+                                    {
+                                        @Html.CheckBoxFor(m => m.Loyalty2Offer.WasOffered, new { id = "loyalty2-offered", disabled = "disabled" })
+                                    }
+                                    else
+                                    {
+                                        @Html.CheckBoxFor(m => m.Loyalty2Offer.WasOffered, new { id = "loyalty2-offered" })
+                                    }
+                                </td>
+                                <td>
+                                    @Html.CheckBoxFor(m => m.Loyalty2Offer.WasAccepted, new { id = "loyalty2-accepted" })
+                                </td>
+                            </tr>
+                            <tr class="warning">
+                                <td rowspan="2">
+                                    <h3>
+                                        Contract<br />Saves Offer
+                                    </h3>
+                                </td>
+                            </tr>
+                            <tr class="warning">
+                                <td>
+                                    @Html.HiddenFor(m => m.ContractOffer.Amount)
+                                    @if (Model.CustomerModel.Rating > 3)
+                                    {
+                                        <span>Contract</span>
+                                    }
+                                    else
+                                    {
+                                        <span style="color: darkgray">Contract</span>
+                                    }
+                                </td>
+                                <td>
+                                    @if (Model.CustomerModel.Rating > 3)
+                                    {
+                                        @Html.CheckBoxFor(m => m.ContractOffer.WasOffered, new { id = "contract-offered" })
+                                    }
+                                    else
+                                    {
+                                        @Html.CheckBoxFor(m => m.ContractOffer.WasOffered, new { id = "contract-offered", disabled = "disabled" })
+                                    }
+                                </td>
+                                <td>
+                                    @Html.CheckBoxFor(m => m.ContractOffer.WasAccepted, new { id = "contract-accepted" })
+                                </td>
+                            </tr>
+                            <tr class="warning noBorder">
+                                <td></td>
+                                <td>
+                                    @Html.DropDownListFor(m => m.SelectedHsd, Model.LoyaltyHsdSpeeds, new { style = "width:200px", id = "hsd-option" })
+                                </td>
+                                <td>
+                                    <span id="ten-dolloar-off-txt">$10 Off for 12<br />Month Contract</span>
+                                </td>
+                                <td>
+                                    @Html.CheckBoxFor(m => m.TwelveMonthContract.WasAccepted, new { id = "twelve-month-contract" })
+                                </td>
+                            </tr>
+                            <tr class="warning noBorder">
+                                <td></td>
+                                <td>
+                                    @Html.DropDownListFor(m => m.SelectedCable, Model.LoyaltyCableSizes, new { style = "width:200px", id = "cable-option" })
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="warning noBorder">
+                                <td></td>
+                                <td>
+                                    @Html.DropDownListFor(m => m.SelectedPhone, Model.LoyaltyPhoneOptions, new { style = "width:200px", id = "phone-option" })
+                                </td>
+                                <td><span id="five-year-discount-txt">5 Year Disount<br />Amount</span></td>
+                                <td>@Html.DropDownListFor(m => m.SelectedFiveYearDiscountAmt, Model.FiveYearDiscountAmts, new { style = "width:120px", id = "five-year-discount-option" })</td>
+                            </tr>
+                            <tr class="danger">
+                                <td rowspan="3">
+                                    <h3>
+                                        No Save
+                                    </h3>
+                                </td>
+                            </tr>
+                            <tr class="danger">
+                                <td>
+                                    Customer Will Call Back
+                                </td>
+                                <td>
+                                    @*@Html.CheckBoxFor(m => m.CustomerCallBackAccepted, new { id = "callback-accepted" })*@
+                                </td>
+                                <td>
+                                    @Html.CheckBoxFor(m => m.CustomerCallBackAccepted, new { id = "callback-accepted" })
+                                </td>
+                            </tr>
+                            <tr class="danger">
+                                <td>
+                                    Processed Customer Disconnect
+                                </td>
+                                <td>
+                                    @*<input type="checkbox" id="offer6" name="offer6"/>*@
+                                </td>
+                                <td>
+                                    @Html.CheckBoxFor(m => m.DisconnectAccepted, new { id = "disconnect-accepted" })
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="col-md-8  col-md-offset-9">
+                        <input type="submit" id="submitOffers" value="Submit" name="command" class="btn btn-default" />
+                        <input type="submit" id="cancelOffers" value="Cancel" name="command" class="btn btn-default" />
+                    </div>
+                    <br />
+                    <br />
+                    <p id="validationMessage" class="alert alert-danger">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $(function () {
+
+                disableContractControls(true);
+                $("#validationMessage").hide();
+
+                var offerList = Array({ "order": 0, "offerTypeId": "loyalty1-offered" },
+                { "order": 1, "offerTypeId": "loyalty2-offered" },
+                { "order": 2, "offerTypeId": "contract-offered" });
+
+                //All accepted check boxes are disabled
+                $('[id*="-accepted"]').not('#disconnect-accepted,#callback-accepted').each(function () {
+                    $(this).prop('disabled', true);
+                });
+
+                $("#chkValidationMessage").hide();
+
+                //Mutually-Exclusive Accepted
+                $('[id*="-accepted"]').change(function () {
+                    $('[id*="-accepted"]').not(this).attr('checked', false);
+                });
+
+                //Enable accepted only when its offered is checked
+                $('[id*="-offered"]').not('#transfer-offered').change(function () {
+                    var offeredId = this.id.toString();
+                    var acceptedId = offeredId.replace('offered', 'accepted');
+
+                    if ($(this).is(":checked")) {
+                        $('#' + acceptedId).attr('disabled', false);
+                    } else {
+                        $('#' + acceptedId).prop('checked', false);
+                        $('#' + acceptedId).attr('disabled', true);
+
+                        var checkTest = false;
+                        $.each(offerList, function (index, value) {
+                            if ($('#' + value.offerTypeId).is(":checked")) {
+                                checkTest = true;
+                            }
+                        });
+                    }
+                });
+
+                function disableContractControls(enabled) {
+                    $('[id*="-option"]').each(function () {
+                        $(this).attr('disabled', enabled);
+                        $(this).val('-99');
+                    });
+
+                    if (enabled) {
+                        $('[id*="-txt"]').each(function () {
+                            $(this).css('color', 'darkgray');
+                        });
+                    } else {
+                        $('[id*="-txt"]').each(function () {
+                            $(this).css('color', '#000');
+                        });
+                    }
+
+                    $('#twelve-month-contract').attr('disabled', enabled);
+                    $('#twelve-month-contract').attr('checked', false);
+                }
+
+                $('[id*="-accepted"],#contract-offered').change(function () {
+                    var value = !$("#contract-accepted").is(":checked");
+                    disableContractControls(value);
+                });
+
+                function assignValidationMessage(message) {
+                    $("#validationMessage").html("");
+                    $("#validationMessage").show();
+                    $("#validationMessage").html(message);
+                }
+
+                $("#submitOffers").click(function () {
+                    var counter = 0;
+
+                    var isContract = $("#contract-accepted").is(":checked");
+                    if (isContract) {
+                        $('[id*="-option"]').each(function () {
+                            var selectedValue = $(this).val();
+                            if (selectedValue === "-99") {
+                                counter++;
+                            }
+                        });
+
+                        if (!$("#twelve-month-contract").is(":checked")) {
+                            counter++;
+                        }
+                    }
+
+                    if (counter > 0) {
+                        assignValidationMessage("HSD Speed, Cable Size, Phone Option, 12 Month Contract and 5 year Discount Amount must all be selected when Contract is chosen.");
+                        return false;
+                    }
+
+                    if ($("#disconnect-accepted").prop('checked') || $("#callback-accepted").prop('checked')) {
+                        return true;
+                    }
+
+                    if ($('[id*="-offered"]:checked').length > 0 && $('[id*="-accepted"]:checked').length > 0) {
+                        return true;
+                    } else {
+                        assignValidationMessage("Both offered and accepted must have at least one box checked.");
+                        return false;
+                    }
+                });
+            });
+        });
+
+    </script>
+}

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wowway.com/Product/Product.API" elementFormDefault="qualified" targetNamespace="http://wowway.com/Product/Product.API" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetEtfByPackage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="etfRequest" nillable="true" type="tns:EtfRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EtfRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountPackage" nillable="true" type="tns:ArrayOfPackage" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EtfRequest" nillable="true" type="tns:EtfRequest" />
+  <xs:complexType name="ArrayOfPackage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Package" nillable="true" type="tns:Package" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPackage" nillable="true" type="tns:ArrayOfPackage" />
+  <xs:complexType name="Package">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Package" nillable="true" type="tns:Package" />
+  <xs:element name="GetEtfByPackageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEtfByPackageResult" nillable="true" type="tns:EtfResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="EtfResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EtfAmount" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EtfResponse" nillable="true" type="tns:EtfResponse" />
+  <xs:element name="GetCustomerRating">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="customerRatingRequest" nillable="true" type="tns:CustomerRatingRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CustomerRatingRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomerRatingRequest" nillable="true" type="tns:CustomerRatingRequest" />
+  <xs:element name="GetCustomerRatingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCustomerRatingResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SystemFaultException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SystemFaultException" nillable="true" type="tns:SystemFaultException" />
+  <xs:element name="GetOffers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getOfferRequest" nillable="true" type="tns:GetOfferRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetOfferRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountPackage" nillable="true" type="tns:ArrayOfPackage" />
+      <xs:element minOccurs="0" name="IsCable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInternet" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPhone" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MarketId" type="xs:int" />
+      <xs:element minOccurs="0" name="OfferGroup" type="tns:Enums.OfferGroup" />
+      <xs:element minOccurs="0" name="SaveLogId" type="xs:int" />
+      <xs:element minOccurs="0" name="StarRating" type="xs:int" />
+      <xs:element minOccurs="0" name="Tenure" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetOfferRequest" nillable="true" type="tns:GetOfferRequest" />
+  <xs:simpleType name="Enums.OfferGroup">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="FrontCounter" />
+      <xs:enumeration value="CallCenter" />
+      <xs:enumeration value="Loyalty" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.OfferGroup" nillable="true" type="tns:Enums.OfferGroup" />
+  <xs:element name="GetOffersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOffersResult" nillable="true" type="tns:GetOfferResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetOfferResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Offers" nillable="true" type="tns:ArrayOfOffers" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetOfferResponse" nillable="true" type="tns:GetOfferResponse" />
+  <xs:complexType name="ArrayOfOffers">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Offers" nillable="true" type="tns:Offers" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOffers" nillable="true" type="tns:ArrayOfOffers" />
+  <xs:complexType name="Offers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DiscountType" type="tns:Enums.DiscountType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Offers" nillable="true" type="tns:Offers" />
+  <xs:simpleType name="Enums.DiscountType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="GoodWill" />
+      <xs:enumeration value="Proactive" />
+      <xs:enumeration value="Discount1" />
+      <xs:enumeration value="Contract" />
+      <xs:enumeration value="Loyalty1" />
+      <xs:enumeration value="Loyalty2" />
+      <xs:enumeration value="TrasferToLoyalty" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enums.DiscountType" nillable="true" type="tns:Enums.DiscountType" />
+  <xs:element name="GetRateIncrease">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rateIncreaseRequest" nillable="true" type="tns:GetRateIncreaseRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="GetRateIncreaseRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountPackage" nillable="true" type="tns:ArrayOfPackage" />
+      <xs:element minOccurs="0" name="IsCable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInternet" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsPhone" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MarketId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRateIncreaseRequest" nillable="true" type="tns:GetRateIncreaseRequest" />
+  <xs:element name="GetRateIncreaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRateIncreaseResult" nillable="true" type="tns:RateIncreaseResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RateIncreaseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RateIncreaseResponse" nillable="true" type="tns:RateIncreaseResponse" />
+</xs:schema>
