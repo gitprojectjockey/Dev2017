@@ -4,3 +4,10 @@ C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Polymorphism\
 C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Polymorphism\Polymorphism\obj\Debug\Polymorphism.exe
 C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Polymorphism\Polymorphism\obj\Debug\Polymorphism.pdb
 C:\@EDevelopment\ESourceCode\@New_Study_2017\Four_Pillers_Examples\Polymorphism\Polymorphism\obj\Debug\Polymorphism.csprojResolveAssemblyReference.cache
+E:\GitProjectJockey\Dev2017\Four_Pillers_Examples\Polymorphism\Polymorphism\bin\Debug\Polymorphism.exe.config
+E:\GitProjectJockey\Dev2017\Four_Pillers_Examples\Polymorphism\Polymorphism\bin\Debug\Polymorphism.exe
+E:\GitProjectJockey\Dev2017\Four_Pillers_Examples\Polymorphism\Polymorphism\bin\Debug\Polymorphism.pdb
+E:\GitProjectJockey\Dev2017\Four_Pillers_Examples\Polymorphism\Polymorphism\obj\Debug\Polymorphism.csprojResolveAssemblyReference.cache
+E:\GitProjectJockey\Dev2017\Four_Pillers_Examples\Polymorphism\Polymorphism\obj\Debug\Polymorphism.csproj.CoreCompileInputs.cache
+E:\GitProjectJockey\Dev2017\Four_Pillers_Examples\Polymorphism\Polymorphism\obj\Debug\Polymorphism.exe
+E:\GitProjectJockey\Dev2017\Four_Pillers_Examples\Polymorphism\Polymorphism\obj\Debug\Polymorphism.pdb
