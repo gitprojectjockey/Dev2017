@@ -1,0 +1,60 @@
+
+[
+  {
+    "_id": "5aa96f6f7961ac7233f285a2",
+    "index": 0,
+    "guid": "b094b0ca-ae62-4e6b-a06d-fc2dab7d66c5",
+    "isActive": false,
+    "balance": "$3,060.10",
+    "picture": "http://placehold.it/32x32",
+    "age": 39,
+    "eyeColor": "green",
+    "name": {
+      "first": "Chasity",
+      "last": "Hester"
+    },
+    "company": "ETERNIS",
+    "email": "chasity.hester@eternis.biz",
+    "phone": "+1 (822) 549-2138",
+    "address": "896 Seagate Avenue, Chical, West Virginia, 8233",
+    "about": "Sunt do ad ipsum ullamco velit quis qui in dolore occaecat labore. Ut ea cillum voluptate nostrud qui sint consectetur nostrud cupidatat do. Occaecat deserunt elit amet reprehenderit nostrud fugiat. Nisi sit cupidatat non deserunt quis dolor. Ex incididunt ullamco exercitation anim aliquip incididunt pariatur. Aliqua fugiat mollit irure id laboris elit. Ut anim eu sunt mollit velit qui proident dolor sunt qui est ex mollit.",
+    "registered": "Monday, August 10, 2015 5:04 AM",
+    "latitude": "69.768994",
+    "longitude": "-75.575668",
+    "tags": [
+      "eu",
+      "occaecat",
+      "dolor",
+      "non",
+      "eu"
+    ],
+    "range": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Carrillo Lloyd"
+      },
+      {
+        "id": 1,
+        "name": "Wilcox Wells"
+      },
+      {
+        "id": 2,
+        "name": "Kerri Small"
+      }
+    ],
+    "greeting": "Hello, Chasity! You have 9 unread messages.",
+    "favoriteFruit": "apple"
+  }
+]
